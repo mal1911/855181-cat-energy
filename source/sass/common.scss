@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1160px;
+  
+  @include arial-normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1160px;
+}

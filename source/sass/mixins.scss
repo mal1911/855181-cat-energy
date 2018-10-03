@@ -1,0 +1,12 @@
+@mixin arial-normal {
+  font-family: $arial;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black;
+}
+
+@mixin oswald-regular {
+  font-family: $oswald;
+  font-weight: 400;
+}
