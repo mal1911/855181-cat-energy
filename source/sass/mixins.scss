@@ -1,12 +1,30 @@
-@mixin arial-normal {
-  font-family: $arial;
+@mixin media-mobile {
+  @media (min-width: $width-mobile) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: $width-tablet) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $width-desktop) {
+    @content;
+  }
+}
+
+@mixin font-arial-normal {
+  font-family: $font-arial;
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
-  color: $black;
+  color: $color-black;
 }
 
-@mixin oswald-regular {
-  font-family: $oswald;
+@mixin font-oswald-regular {
+  font-family: $font-oswald;
   font-weight: 400;
 }
