@@ -1,9 +1,3 @@
-@mixin media-mobile {
-  @media (min-width: $width-mobile) {
-    @content;
-  }
-}
-
 @mixin media-tablet {
   @media (min-width: $width-tablet) {
     @content;
@@ -16,15 +10,42 @@
   }
 }
 
+@mixin ul-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
 @mixin font-arial-normal {
   font-family: $font-arial;
   font-weight: 300;
+}
+
+@mixin font-arial-normal-14-18 {
+  @include font-arial-normal();
   font-size: 14px;
   line-height: 18px;
-  color: $color-black;
 }
 
 @mixin font-oswald-regular {
   font-family: $font-oswald;
   font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin font-oswald-regular-18-24 {
+  @include font-oswald-regular();
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin font-oswald-regular-20-20 {
+  @include font-oswald-regular();
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin font-oswald-regular-20-24 {
+  @include font-oswald-regular();
+  font-size: 20px;
+  line-height: 24px;
 }

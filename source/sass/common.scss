@@ -2,7 +2,10 @@ body {
   margin: 0;
   padding: 0;
   min-width: $width-mobile;
-  @include font-arial-normal;
+  color: $color-black-lihgt;
+  background-color: $color-white;
+
+  @include font-arial-normal-14-18;
 }
 
 a {
@@ -14,22 +17,15 @@ img {
   height: auto;
 }
 
-.container {
-  margin: 0 auto;
-
-  @include media-mobile {
-    width: $width-mobile;
-    background-color: gray;
-  }
-
-  @include media-tablet {
-    width: $width-tablet;
-    background-color: blue;
-  }
-
-  @include media-desktop {
-    width: $width-desktop;
-    background-color: red;
-  }
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
+
+

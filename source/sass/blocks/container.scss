@@ -1,0 +1,14 @@
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: $width-mobile;
+
+  @include media-tablet {
+    width: $width-tablet;
+  }
+
+  @include media-desktop {
+    width: $width-desktop;
+  }
+}

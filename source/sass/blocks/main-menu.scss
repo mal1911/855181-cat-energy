@@ -1,0 +1,16 @@
+.main-menu {
+  @include ul-reset();
+}
+
+.main-menu__item {
+}
+
+.main-menu__link {
+  border-top: 1px solid $color-gray;
+  border-bottom: 1px solid $color-gray;
+  display: block;
+  @include font-oswald-regular-20-20();
+  padding: 5px 0;
+  text-align: center;
+  color: $color-black;
+}
