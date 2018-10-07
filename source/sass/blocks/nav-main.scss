@@ -4,26 +4,25 @@
 }
 
 .nav-main__toggle {
-  border: none;
   position: absolute;
   top: -50px;
   left: 225px;
   width: 24px;
   height: 24px;
+  border: none;
+  background-color: $color-white;
   background-image: url(../img/icon-close.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-color: $color-white;
   cursor: pointer;
 
   @include media-tablet {
     display: none;
   }
-
   @include media-desktop {
   }
 }
 
 .nav-main__list {
-  
+
 }

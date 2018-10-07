@@ -1,0 +1,64 @@
+.example {
+  background-color: $color-gray;
+}
+
+.example__header {
+  color: $color-black;
+  font-size: 36px;
+  line-height: 60px;
+
+  @include font-oswald-regular();
+}
+
+.example__text {
+  padding: 5px;
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-around;
+
+  @include ul-reset;
+}
+
+.example__item {
+  position: relative;
+  width: 110px;
+  border: solid 1px $color-gray-border;
+}
+
+.examlpe__result {
+  color: $color-black;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+
+  @include font-oswald-regular();
+}
+
+.example__value {
+  position: absolute;
+  top: 42px;
+  left: 10px;
+  width: 85px;
+  background-color: $color-gray;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+
+  @include font-arial-normal();
+}
+
+.example__cost {
+  margin-top: 26px;
+  color: $color-black;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include font-oswald-regular();
+}
+
+.example__slider {
+}

@@ -11,41 +11,17 @@
 }
 
 @mixin ul-reset {
-  list-style: none;
   padding-left: 0;
+  list-style: none;
 }
 
 @mixin font-arial-normal {
-  font-family: $font-arial;
   font-weight: 300;
-}
-
-@mixin font-arial-normal-14-18 {
-  @include font-arial-normal();
-  font-size: 14px;
-  line-height: 18px;
+  font-family: $font-arial;
 }
 
 @mixin font-oswald-regular {
-  font-family: $font-oswald;
   font-weight: 400;
-  text-transform: uppercase;
+  font-family: $font-oswald;
 }
 
-@mixin font-oswald-regular-18-24 {
-  @include font-oswald-regular();
-  font-size: 18px;
-  line-height: 24px;
-}
-
-@mixin font-oswald-regular-20-20 {
-  @include font-oswald-regular();
-  font-size: 20px;
-  line-height: 20px;
-}
-
-@mixin font-oswald-regular-20-24 {
-  @include font-oswald-regular();
-  font-size: 20px;
-  line-height: 24px;
-}

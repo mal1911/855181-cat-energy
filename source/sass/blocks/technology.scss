@@ -1,0 +1,55 @@
+.technology {
+}
+
+.technology__header {
+  @include font-oswald-regular();
+  font-size: 36px;
+  line-height: 60px;
+  color: $color-black;
+}
+
+.technology__list {
+  @include ul-reset();
+}
+
+.technology__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: $color-green;
+    background-position: center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &--vitamins::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--packaging::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--lunch::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--result::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+.technology__text {
+  margin-left: 60px;
+  color: $color-black-lihgt;
+  font-size: 14px;
+  line-height: 18px;
+
+  @include font-arial-normal();
+}
