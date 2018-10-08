@@ -1,3 +1,19 @@
-.header__logo {
+.header {
   padding: 0 20px;
+
+  @include media-tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__logo {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
