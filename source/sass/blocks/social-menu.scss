@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
+  border-top: 1px solid $color-gray-border;
   border-bottom: 1px solid $color-gray-border;
 
   @include ul-reset();

@@ -2,6 +2,10 @@
   background-color: $color-gray;
 }
 
+.example .container {
+  padding: 0 20px;
+}
+
 .example__header {
   color: $color-black;
   font-size: 36px;

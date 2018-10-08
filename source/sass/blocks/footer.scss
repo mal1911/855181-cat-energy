@@ -1,32 +1,41 @@
 .footer {
-  background-color: $color-gray;
 }
 
-.footer__logo {
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $color-gray-border;
-  text-align: center;
-}
-
-.footer__logo-image {
-  /*margin: 10px auto;*/
+.footer__map {
+  width: 100%;
 }
 
 .footer__bottom {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: $color-gray;
+}
+
+.footer__bottom .container {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.footer__logo {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .footer__social {
-  order: 0;
+  width: 100%;
+}
+
+.footer__academy {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
 .footer__academy-text {
-  order: 1;
   color: $color-black-lihgt;
   font-size: 16px;
   line-height: 16px;
@@ -35,5 +44,4 @@
 }
 
 .footer__academy-img {
-  order: 2;
 }

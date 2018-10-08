@@ -1,23 +1,52 @@
-.additional{
-
+.additional {
 }
 
-.additional__header{
-  @include font-oswald-regular();
+.additional__header {
+  padding-left: 20px;
+  color: $color-black;
   font-size: 24px;
   line-height: 24px;
-  color: $color-black;
-
+  @include font-oswald-regular();
 }
 
-.additional__list{
-
+.additional__list {
+  @include ul-reset;
 }
 
-.additional__item{
-
+.additional__list.container {
+  padding: 0 20px;
 }
 
-.additional__link{
+.additional__item {
+  border-bottom: 1px solid $color-gray-border;
+}
 
+.additional__name{
+  @include font-oswald-regular();
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $color-black2;
+}
+.additional__link {
+  margin-bottom: 10px;
+}
+
+.additional__prop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.additional__packaging {
+  @include font-arial-normal();
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-black-lihgt;
+}
+
+.additional__cost {
+  @include font-arial-normal();
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-black-lihgt;
 }

@@ -1,12 +1,11 @@
-.main {
+.main-form {
 }
 
-.main__header {
+.main-form__header {
   margin: 0;
-  color: $color-white;
+  color: $color-black;
   font-size: 36px;
   line-height: 36px;
-  text-transform: uppercase;
 
   @include font-oswald-regular();
 }
