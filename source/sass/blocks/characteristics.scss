@@ -1,8 +1,7 @@
-.characteristics {
-}
 .characteristics__item {
   display: flex;
 }
+
 .characteristics__prop {
   width: 50px;
   color: $color-black-lihgt;
@@ -11,6 +10,7 @@
 
   @include font-arial-normal();
 }
+
 .characteristics__value {
   width: 50px;
   color: $color-black-lihgt;

@@ -2,9 +2,6 @@
   @include ul-reset();
 }
 
-.main-menu__item {
-}
-
 .main-menu__link {
   display: block;
   padding: 5px 0;
@@ -12,9 +9,9 @@
   border-bottom: 1px solid $color-gray;
   color: $color-black;
   text-align: center;
+  text-transform: uppercase;
   font-size: 20px;
   line-height: 20px;
-  text-transform: uppercase;
 
   @include font-oswald-regular();
 }

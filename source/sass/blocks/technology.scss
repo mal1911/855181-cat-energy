@@ -3,10 +3,11 @@
 }
 
 .technology__header {
-  @include font-oswald-regular();
+  color: $color-black;
   font-size: 36px;
   line-height: 60px;
-  color: $color-black;
+
+  @include font-oswald-regular();
 }
 
 .technology__list {

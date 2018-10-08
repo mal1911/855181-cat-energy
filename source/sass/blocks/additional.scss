@@ -1,11 +1,9 @@
-.additional {
-}
-
 .additional__header {
   padding-left: 20px;
   color: $color-black;
   font-size: 24px;
   line-height: 24px;
+
   @include font-oswald-regular();
 }
 
@@ -21,13 +19,15 @@
   border-bottom: 1px solid $color-gray-border;
 }
 
-.additional__name{
-  @include font-oswald-regular();
+.additional__name {
+  color: $color-black2;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
-  text-transform: uppercase;
-  color: $color-black2;
+
+  @include font-oswald-regular();
 }
+
 .additional__link {
   margin-bottom: 10px;
 }
@@ -38,15 +38,17 @@
 }
 
 .additional__packaging {
-  @include font-arial-normal();
+  color: $color-black-lihgt;
   font-size: 14px;
   line-height: 14px;
-  color: $color-black-lihgt;
+
+  @include font-arial-normal();
 }
 
 .additional__cost {
-  @include font-arial-normal();
+  color: $color-black-lihgt;
   font-size: 14px;
   line-height: 14px;
-  color: $color-black-lihgt;
+
+  @include font-arial-normal();
 }

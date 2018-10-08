@@ -1,6 +1,5 @@
 .nav-main {
   position: relative;
-
 }
 
 .nav-main__toggle {
@@ -19,10 +18,5 @@
   @include media-tablet {
     display: none;
   }
-  @include media-desktop {
-  }
 }
 
-.nav-main__list {
-
-}

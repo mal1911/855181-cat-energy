@@ -1,7 +1,7 @@
 .offers {
   padding: 0 20px;
-
 }
+
 .offers__list {
   @include ul-reset();
 }
@@ -18,9 +18,9 @@
   position: relative;
   padding-left: 70px;
   color: $color-black;
+  text-transform: uppercase;
   font-size: 24px;
   line-height: 37px;
-  text-transform: uppercase;
 
   @include font-oswald-regular();
 
@@ -58,9 +58,9 @@
 .offers__link {
   position: relative;
   color: $color-black;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
-  text-transform: uppercase;
 
   @include font-oswald-regular();
 
