@@ -1,0 +1,8 @@
+.main-index__header {
+  margin: 0;
+  color: $color-white;
+  font-size: 36px;
+  line-height: 36px;
+
+  @include font-oswald-regular();
+}

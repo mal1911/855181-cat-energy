@@ -1,0 +1,21 @@
+.characteristics__item {
+  display: flex;
+}
+
+.characteristics__prop {
+  width: 50px;
+  color: $color-black-lihgt;
+  font-size: 12px;
+  line-height: 16px;
+
+  @include font-arial-normal();
+}
+
+.characteristics__value {
+  width: 50px;
+  color: $color-black-lihgt;
+  font-size: 12px;
+  line-height: 16px;
+
+  @include font-arial-normal();
+}

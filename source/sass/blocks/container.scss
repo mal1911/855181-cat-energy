@@ -1,0 +1,13 @@
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-width: $width-mobile;
+
+  @include media-tablet {
+    /*width: $width-tablet;*/
+  }
+
+  @include media-desktop {
+    max-width: $width-desktop;
+  }
+}

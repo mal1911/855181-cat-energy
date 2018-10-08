@@ -1,0 +1,18 @@
+.motivation {
+  padding: 0 20px;
+  /*background-color: #63a73a;*/
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-position: top center;
+  background-size: 320px, 305px;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.motivation__slogan {
+  color: $color-white;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+
+  @include font-oswald-regular();
+}

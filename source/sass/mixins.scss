@@ -1,0 +1,26 @@
+@mixin media-tablet {
+  @media (min-width: $width-tablet) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $width-desktop) {
+    @content;
+  }
+}
+
+@mixin ul-reset {
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin font-arial-normal {
+  font-weight: 300;
+  font-family: $font-arial;
+}
+
+@mixin font-oswald-regular {
+  font-weight: 400;
+  font-family: $font-oswald;
+}
