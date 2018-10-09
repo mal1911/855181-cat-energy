@@ -1,9 +1,28 @@
 .example {
   background-color: $color-gray;
+
+  @include media-tablet {
+    background-color: inherit;
+  }
+  @include media-desktop {
+    background-image: linear-gradient(
+      to bottom,
+      $color-white 200px,
+      $color-gray 200px
+    );
+  }
 }
 
 .example .container {
+  display: flex;
+  flex-direction: column;
   padding: 0 20px;
+
+  @include media-tablet {
+  }
+  @include media-desktop {
+    flex-direction: row;
+  }
 }
 
 .example__header {
@@ -16,6 +35,18 @@
 
 .example__text {
   padding: 5px;
+}
+
+.example__data {
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet {
+    flex-direction: row;
+  }
+  @include media-desktop {
+    flex-direction: column;
+  }
 }
 
 .example__list {
@@ -62,4 +93,10 @@
   line-height: 20px;
 
   @include font-oswald-regular();
+}
+
+.example__slider {
+  width: 300px;
+  height: 300px;
+  background-color: red;
 }

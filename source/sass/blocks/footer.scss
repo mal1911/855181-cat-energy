@@ -1,3 +1,7 @@
+.footer {
+  position: relative;
+}
+
 .footer__map {
   width: 100%;
 }
@@ -33,7 +37,7 @@
 }
 
 .footer__academy-text {
-  color: $color-black-lihgt;
+  color: $color-black-light;
   font-size: 16px;
   line-height: 16px;
 

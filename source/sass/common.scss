@@ -3,11 +3,12 @@ body {
   padding: 0;
   min-width: $width-mobile;
   background-color: $color-white;
-  color: $color-black-lihgt;
+  color: $color-black-light;
   font-size: 14px;
   line-height: 18px;
 
   @include font-arial-normal();
+  counter-reset: tech-counter;
 }
 
 a {
