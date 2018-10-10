@@ -4,11 +4,10 @@
   @include media-tablet {
     width: 70%;
   }
-
+  
   @include media-desktop {
     width: 50%;
   }
-
 }
 
 .nav-main__toggle {

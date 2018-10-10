@@ -22,6 +22,7 @@
     padding-left: 50px;
     width: 60%;
     text-align: left;
+
     &::before {
       background-color: $color-white;
       background-image: none;
@@ -32,6 +33,7 @@
 @include media-desktop {
   .motivation {
     padding-left: 50px;
+
     &::before {
       position: absolute;
       top: 0;
@@ -57,6 +59,7 @@
   line-height: 14px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     color: $color-black;
     font-size: 20px;
@@ -70,6 +73,7 @@
     font-size: 20px;
     line-height: 20px;
   }
+
   @include media-desktop {
     margin-bottom: 220px;
   }

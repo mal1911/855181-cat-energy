@@ -12,6 +12,7 @@
 
 .technology__list {
   @include ul-reset();
+  
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
