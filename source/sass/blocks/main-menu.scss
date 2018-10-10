@@ -1,5 +1,6 @@
 .main-menu {
   @include ul-reset();
+
   @include media-tablet {
     display: flex;
     justify-content: space-between;
@@ -29,6 +30,7 @@
 
   @include media-tablet {
     border: none;
+
     &:focus,
     &:hover {
       opacity: 0.6;
