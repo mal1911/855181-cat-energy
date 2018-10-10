@@ -26,6 +26,7 @@
   line-height: 20px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     border: none;
     &:focus,

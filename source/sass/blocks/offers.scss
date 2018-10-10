@@ -4,6 +4,7 @@
 
 .offers__list {
   @include ul-reset();
+
   @include media-desktop {
     display: flex;
     justify-content: space-between;

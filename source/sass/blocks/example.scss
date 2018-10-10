@@ -4,12 +4,9 @@
   @include media-tablet {
     background-color: inherit;
   }
+
   @include media-desktop {
-    background-image: linear-gradient(
-      to bottom,
-      $color-white 200px,
-      $color-gray 200px
-    );
+    background-image: linear-gradient(to bottom, $color-white 200px, $color-gray 200px);
   }
 }
 
@@ -18,8 +15,6 @@
   flex-direction: column;
   padding: 0 20px;
 
-  @include media-tablet {
-  }
   @include media-desktop {
     flex-direction: row;
   }
@@ -44,6 +39,7 @@
   @include media-tablet {
     flex-direction: row;
   }
+
   @include media-desktop {
     flex-direction: column;
   }
