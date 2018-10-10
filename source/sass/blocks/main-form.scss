@@ -5,7 +5,6 @@
   line-height: 36px;
 
   @include font-oswald-regular();
-  
   @include media-tablet {
     font-size: 60px;
     line-height: 60px;
