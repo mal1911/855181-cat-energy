@@ -12,15 +12,20 @@
 
 .technology__list {
   @include ul-reset();
+
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .technology__item {
   position: relative;
+  display: flex;
 
   &::before {
-    position: absolute;
-    top: 5px;
-    left: 5px;
+    display: block;
+    flex-shrink: 0;
     width: 40px;
     height: 40px;
     background-color: $color-green;
@@ -47,9 +52,46 @@
   }
 }
 
+@include media-tablet {
+  .technology__item {
+    flex-direction: column;
+    width: 50%;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      background-size: 50px 50px;
+    }
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: $color-gray;
+      content: counter(tech-counter);
+      counter-increment: tech-counter;
+      font-size: 200px;
+
+      @include font-oswald-regular;
+    }
+  }
+}
+
+@include media-desktop {
+  .technology__item {
+    width: 25%;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      background-size: 50px 50px;
+    }
+  }
+}
+
 .technology__text {
-  margin-left: 60px;
-  color: $color-black-lihgt;
+  margin-left: 20px;
+  color: $color-black-light;
   font-size: 14px;
   line-height: 18px;
 

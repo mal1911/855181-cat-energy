@@ -4,6 +4,11 @@
 
 .offers__list {
   @include ul-reset();
+
+  @include media-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .offers__item {
@@ -55,6 +60,54 @@
   }
 }
 
+@include media-tablet {
+  .offers__header {
+    padding-right: 120px;
+    padding-left: 10px;
+    font-size: 24px;
+
+    &::before {
+      top: 5px;
+      right: 5px;
+      left: auto;
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      top: 5px;
+      right: 5px;
+      left: auto;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@include media-desktop {
+  .offers__header {
+    padding-right: 120px;
+    padding-left: 10px;
+    font-size: 24px;
+
+    &::before {
+      top: 5px;
+      right: auto;
+      left: 5;
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      top: 5px;
+      right: auto;
+      left: 5px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
 .offers__link {
   position: relative;
   color: $color-black;
@@ -74,5 +127,12 @@
     background-position: top, left;
     background-repeat: no-repeat;
     content: "";
+  }
+}
+
+@include media-tablet {
+  .offers__link {
+    font-size: 20px;
+    line-height: 20px;
   }
 }

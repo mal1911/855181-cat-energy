@@ -1,11 +1,55 @@
 .motivation {
   padding: 0 20px;
-  /*background-color: #63a73a;*/
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: top center;
-  background-size: 320px, 305px;
-  background-repeat: no-repeat;
   text-align: center;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    min-height: 306px;
+    width: 100%;
+    background-color: $color-background-green;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position: top center;
+    background-size: 320px, 305px;
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+@include media-tablet {
+  .motivation {
+    padding-left: 50px;
+    width: 60%;
+    text-align: left;
+
+    &::before {
+      background-color: $color-white;
+      background-image: none;
+    }
+  }
+}
+
+@include media-desktop {
+  .motivation {
+    padding-left: 50px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      z-index: -1;
+      min-height: 696px;
+      width: 50%;
+      background-color: $color-background-green;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: top right;
+      background-size: cover;
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
 }
 
 .motivation__slogan {
@@ -15,4 +59,22 @@
   line-height: 14px;
 
   @include font-oswald-regular();
+
+  @include media-tablet {
+    color: $color-black;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.motivation__button {
+  @include media-tablet {
+    width: 250px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 220px;
+  }
 }

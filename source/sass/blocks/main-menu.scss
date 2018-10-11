@@ -1,5 +1,18 @@
 .main-menu {
   @include ul-reset();
+
+  @include media-tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-menu__item {
+  @include media-tablet {
+    &--active {
+      border-bottom: 2px solid $color-green;
+    }
+  }
 }
 
 .main-menu__link {
@@ -14,4 +27,31 @@
   line-height: 20px;
 
   @include font-oswald-regular();
+
+  @include media-tablet {
+    border: none;
+
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-menu--index .main-menu__link {
+  @include media-desktop {
+    color: $color-white;
+  }
+}
+
+.main-menu--index .main-menu__item {
+  @include media-desktop {
+    &--active {
+      border-bottom: 2px solid $color-white;
+    }
+  }
 }

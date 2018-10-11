@@ -9,4 +9,56 @@
   line-height: 18px;
 
   @include font-oswald-regular();
+
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.picking__basis {
+  @include media-desktop {
+    display: flex;
+  }
+}
+
+.picking__data {
+  display: flex;
+  flex-direction: column;
+}
+
+.picking__action {
+  display: flex;
+  flex-direction: column;
+}
+
+.picking__contacts .container {
+  @include media-desktop {
+    display: flex;
+  }
+}
+
+.picking__additionally .container {
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.picking__check-control {
+  width: 100%;
+
+  @include media-tablet {
+    width: 50%;
+  }
+
+  @include media-desktop {
+    width: 25%;
+  }
+}
+
+.picking__button-control {
+  @include media-tablet {
+    display: flex;
+  }
 }

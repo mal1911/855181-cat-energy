@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,8 +22,8 @@
         <li class="main-menu__item">
           <a class="main-menu__link" href="catalog.html">Каталог продукции</a>
         </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link main-menu__item--active">Подбор программы</a>
+        <li class="main-menu__item main-menu__item--active">
+          <a class="main-menu__link">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -35,18 +36,37 @@
       </div>
       <section class="picking__basis container">
         <h2 class="visually-hidden">Основные данные</h2>
-        <label class="picking__radio-label" for="radio-weight-minus">Похудение</label>
-        <input class="picking__radio-input visually-hidden" id="radio-weight-minus" type="radio" name="radio-weight-minus"
-          value="on" checked>
-        <label class="picking__radio-label" for="radio-weight-plus">Набор массы</label>
-        <input class="picking__radio-input visually-hidden" id="radio-weight-plus" type="radio" name="radio-weight-plus"
-          value="off">
-        <label class="picking__radio-label" for="radio-not-know">Не знаю (Нужен ваш совет)</label>
-        <input class="picking__radio-input visually-hidden" id="radio-not-know" type="radio" name="radio-not-know"
-          value="off">
+        <div class="picking__data">
+          <div class="picking__text-control">
+            <label class="picking__text-label" for="cat__name">Имя:*</label>
+            <input class="picking__text-input" id="cat__name" type="text" required name="name" placeholder="Барсик"
+              autocomplete="off">
+          </div>
+          <div class="picking__text-control">
+            <label class="picking__text-label" for="cat__weight">Вес (кг):*</label>
+            <input class="picking__text-input" id="cat__weight" type="number" required name="cat__weight" pattern=""
+              placeholder="7" value="7" autocomplete="off">
+          </div>
+          <div class="picking__text-control">
+            <label class="picking__text-label" for="cat__age">Возраст (лет):</label>
+            <input class="picking__text-input" id="cat__age" type="number" required name="cat__age" pattern=""
+              placeholder="7" value="7" autocomplete="off">
+          </div>
+        </div>
+        <div class="picking__action">
+          <label class="picking__radio-label" for="radio-weight-minus">Похудение</label>
+          <input class="picking__radio-input visually-hidden" id="radio-weight-minus" type="radio" name="radio-weight-minus"
+            value="on" checked>
+          <label class="picking__radio-label" for="radio-weight-plus">Набор массы</label>
+          <input class="picking__radio-input visually-hidden" id="radio-weight-plus" type="radio" name="radio-weight-plus"
+            value="off">
+          <label class="picking__radio-label" for="radio-not-know">Не знаю (Нужен ваш совет)</label>
+          <input class="picking__radio-input visually-hidden" id="radio-not-know" type="radio" name="radio-not-know"
+            value="off">
+        </div>
       </section>
       <section class="picking__contacts">
-        <h2 class="picking__header">Контактные данные (владельца кота)</h2>
+        <h2 class="picking__header color-header">Контактные данные (владельца кота)</h2>
         <div class="container">
           <div class="picking__text-control">
             <label class="picking__text-label" for="contacts__email">E-mail:*</label>
@@ -61,7 +81,7 @@
         </div>
       </section>
       <section class="picking__comments">
-        <h2 class="picking__header">Комментарии</h2>
+        <h2 class="picking__header color-header">Комментарии</h2>
         <div class="container">
           <textarea class="picking__textarea" name="comments" id="comments" placeholder="Расскажите обо всех повадках кота"
             autocomplete="off"></textarea>
@@ -69,20 +89,28 @@
         </div>
       </section>
       <section class="picking__additionally">
-        <h2 class="picking__header">Дополнительно</h2>
+        <h2 class="picking__header color-header">Дополнительно</h2>
         <div class="container">
-          <label class="picking__check-label picking__check-label--sweetener" for="additionally--sweetener">Сахарозаменитель</label>
-          <input class="picking__check-input visually-hidden" id="additionally--sweetener" type="checkbox" name="sweetener"
-            checked>
-          <label class="picking__check-label picking__check-label--water" for="additionally--water">Питьевая вода</label>
-          <input class="picking__check-input visually-hidden" id="additionally--water" type="checkbox" name="water">
-          <label class="picking__check-label picking__check-label--milk" for="additionally--milk">Молоко</label>
-          <input class="picking__check-input visually-hidden" id="additionally--milk" type="checkbox" name="milk">
-          <label class="picking__check-label picking__check-label--vitamins" for="additionally--vitamins">Витамины</label>
-          <input class="picking__check-input visually-hidden" id="additionally--vitamins" type="checkbox" name="vitamins">
+          <div class="picking__check-control">
+            <label class="picking__check-label picking__check-label--sweetener" for="additionally--sweetener">Сахарозаменитель</label>
+            <input class="picking__check-input visually-hidden" id="additionally--sweetener" type="checkbox" name="sweetener"
+              checked>
+          </div>
+          <div class="picking__check-control">
+            <label class="picking__check-label picking__check-label--water" for="additionally--water">Питьевая вода</label>
+            <input class="picking__check-input visually-hidden" id="additionally--water" type="checkbox" name="water">
+          </div>
+          <div class="picking__check-control">
+            <label class="picking__check-label picking__check-label--milk" for="additionally--milk">Молоко</label>
+            <input class="picking__check-input visually-hidden" id="additionally--milk" type="checkbox" name="milk">
+          </div>
+          <div class="picking__check-control">
+            <label class="picking__check-label picking__check-label--vitamins" for="additionally--vitamins">Витамины</label>
+            <input class="picking__check-input visually-hidden" id="additionally--vitamins" type="checkbox" name="vitamins">
+          </div>
         </div>
       </section>
-      <div class="container">
+      <div class="picking__button-control container">
         <input class="button picking__button" type="submit" value="Отправить заявку">
         <p class="picking__note">* — Обязательные поля</p>
       </div>

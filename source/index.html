@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,7 +15,7 @@
     </a>
     <nav class="nav-main">
       <button class="nav-main__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <ul class="nav-main__list main-menu">
+      <ul class="nav-main__list main-menu main-menu--index">
         <li class="main-menu__item main-menu__item--active">
           <a class="main-menu__link">Главная</a>
         </li>
@@ -71,21 +72,25 @@
     </section>
     <section class="example">
       <div class="container">
-        <h2 class="example__header">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-          часов в день. </p>
-        <ul class="example__list">
-          <li class="example__item">
-            <p class="examlpe__result">5 кг</p>
-            <p class="example__value">Снижение веса</p>
-          </li>
-          <li class="example__item">
-            <p class="examlpe__result">60 дней</p>
-            <p class="example__value">Затрачено времени</p>
-          </li>
-        </ul>
-        <p class="example__cost">Затраты на питание: 15 000 руб.</p>
+        <div class="example__block">
+          <h2 class="example__header">Живой пример</h2>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+            часов в день. </p>
+          <div class="example__data">
+            <ul class="example__list">
+              <li class="example__item">
+                <p class="examlpe__result">5 кг</p>
+                <p class="example__value">Снижение веса</p>
+              </li>
+              <li class="example__item">
+                <p class="examlpe__result">60 дней</p>
+                <p class="example__value">Затрачено времени</p>
+              </li>
+            </ul>
+            <p class="example__cost">Затраты на питание: 15 000 руб.</p>
+          </div>
+        </div>
         <div class="example__slider">
           Тут будет слайдер
         </div>
@@ -128,7 +133,7 @@
         </div>
       </div>
 
-      </div>
+    </div>
   </footer>
 </body>
 
