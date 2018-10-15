@@ -1,12 +1,16 @@
 .example {
+  margin-top: 40px;
   background-color: $color-gray;
 
   @include media-tablet {
     background-color: inherit;
   }
-
   @include media-desktop {
-    background-image: linear-gradient(to bottom, $color-white 200px, $color-gray 200px);
+    background-image: linear-gradient(
+      to bottom,
+      $color-white 200px,
+      $color-gray 200px
+    );
   }
 }
 
@@ -21,6 +25,8 @@
 }
 
 .example__header {
+  margin: 0;
+  padding-top: 17px;
   color: $color-black;
   font-size: 36px;
   line-height: 60px;
@@ -29,17 +35,17 @@
 }
 
 .example__text {
-  padding: 5px;
+  margin-top: 25px;
 }
 
 .example__data {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 
   @include media-tablet {
     flex-direction: row;
   }
-
   @include media-desktop {
     flex-direction: column;
   }
@@ -47,20 +53,25 @@
 
 .example__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   @include ul-reset;
 }
 
 .example__item {
   position: relative;
-  width: 110px;
+  width: 122px;
+  height: 54px;
   border: solid 1px $color-gray-border;
 }
 
 .examlpe__result {
+  margin-top: 12px;
   color: $color-black;
   text-align: center;
+  text-transform: uppercase;
   font-size: 24px;
   line-height: 24px;
 
@@ -69,13 +80,15 @@
 
 .example__value {
   position: absolute;
-  top: 42px;
-  left: 10px;
+  top: 40px;
+  left: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 85px;
   background-color: $color-gray;
   text-align: center;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 12px;
 
   @include font-arial-normal();
 }
@@ -93,6 +106,6 @@
 
 .example__slider {
   width: 300px;
-  height: 300px;
-  background-color: red;
+  height: 349px;
+
 }

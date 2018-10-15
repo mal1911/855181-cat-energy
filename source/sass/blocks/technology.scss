@@ -1,8 +1,10 @@
 .technology {
   padding: 0 20px;
+  margin-top: -3px;
 }
 
 .technology__header {
+  margin: 0;
   color: $color-black;
   font-size: 36px;
   line-height: 60px;
@@ -11,6 +13,9 @@
 }
 
 .technology__list {
+
+  margin-top: 26px;
+
   @include ul-reset();
 
   @include media-tablet {
@@ -20,17 +25,19 @@
 }
 
 .technology__item {
+  margin-top: 16px;
   position: relative;
   display: flex;
 
   &::before {
     display: block;
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    margin-top: 2px;
+    width: 60px;
+    height: 60px;
     background-color: $color-green;
     background-position: center;
-    background-size: 30px 30px;
+    background-size: 50px 50px;
     background-repeat: no-repeat;
     content: "";
   }
@@ -40,11 +47,11 @@
   }
 
   &--packaging::before {
-    background-image: url("../img/advantage-dining@1x.png");
+    background-image: url("../img/advantage-powder@1x.png");
   }
 
   &--lunch::before {
-    background-image: url("../img/advantage-powder@1x.png");
+    background-image: url("../img/advantage-dining@1x.png");
   }
 
   &--result::before {
@@ -90,6 +97,8 @@
 }
 
 .technology__text {
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 20px;
   color: $color-black-light;
   font-size: 14px;

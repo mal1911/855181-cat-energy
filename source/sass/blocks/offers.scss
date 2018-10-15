@@ -1,10 +1,13 @@
 .offers {
+  margin-top: 22px;
+  margin-bottom: 0;
   padding: 0 20px;
 }
 
 .offers__list {
-  @include ul-reset();
+  margin-top: 10px;
 
+  @include ul-reset();
   @include media-desktop {
     display: flex;
     justify-content: space-between;
@@ -14,14 +17,17 @@
 .offers__item {
   box-sizing: border-box;
   margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 10px;
+  margin-bottom: 21px;
+  padding: 10px 20px;
   background-color: $color-gray;
 }
 
 .offers__header {
   position: relative;
-  padding-left: 70px;
+  margin-top: 19px;
+  /* margin-bottom: 10px;*/
+  padding-left: 71px;
+  /*padding-top: 3px;*/
   color: $color-black;
   text-transform: uppercase;
   font-size: 24px;
@@ -31,10 +37,10 @@
 
   &::before {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 40px;
-    height: 40px;
+    top: -4px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: $color-green;
     content: "";
@@ -42,22 +48,31 @@
 
   &::after {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 40px;
-    height: 40px;
     background-position: top, left;
     background-repeat: no-repeat;
     content: "";
   }
 
   &--minus::after {
+    top: -9px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
     background-image: url("../img/icon-cat-slim.svg");
   }
 
   &--plus::after {
+    top: 7px;
+    left: -7px;
+    width: 67px;
+    height: 40px;
     background-image: url("../img/icon-cat-pro.svg");
   }
+}
+
+.offers__text {
+  margin-top: 30px;
+  margin-bottom: 22px;
 }
 
 @include media-tablet {
@@ -109,7 +124,11 @@
 }
 
 .offers__link {
+  display: block;
   position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: solid 1px $color-gray-border;
   color: $color-black;
   text-transform: uppercase;
   font-size: 16px;
@@ -119,10 +138,10 @@
 
   &::after {
     position: absolute;
-    top: 7px;
+    top: 24px;
     left: 95px;
-    width: 15px;
-    height: 10px;
+    width: 27px;
+    height: 11px;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-position: top, left;
     background-repeat: no-repeat;

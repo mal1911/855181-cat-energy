@@ -12,8 +12,8 @@
 
 .nav-main__toggle {
   position: absolute;
-  top: -50px;
-  left: 225px;
+  top: -34px;
+  left: 256px;
   width: 24px;
   height: 24px;
   border: none;
@@ -24,6 +24,24 @@
   cursor: pointer;
 
   @include media-tablet {
+    display: none;
+  }
+}
+
+.nav-main--closed .nav-main__toggle {
+  background-image: url("../img/icon-mobile-menu.svg");
+}
+
+@include media-mobile {
+  .nav-main--closed .main-menu {
+    display: none;
+  }
+
+  .nav-main--nojs .main-menu {
+    display: block;
+  }
+
+  .nav-main--nojs .nav-main__toggle {
     display: none;
   }
 }

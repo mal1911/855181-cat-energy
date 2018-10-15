@@ -1,9 +1,12 @@
 .footer {
   position: relative;
+  margin-top: 13px;
 }
 
 .footer__map {
+  margin-top: -28px;
   width: 100%;
+  z-index: -1;
 }
 
 .footer__bottom {
