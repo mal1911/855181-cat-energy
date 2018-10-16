@@ -2,12 +2,20 @@
   margin-top: 22px;
   margin-bottom: 0;
   padding: 0 20px;
+
+  @include media-tablet {
+    margin-top: 0;
+    padding: 0 25px;
+  }
 }
 
 .offers__list {
   margin-top: 10px;
 
   @include ul-reset();
+  @include media-tablet {
+    margin-top: 0;
+  }
   @include media-desktop {
     display: flex;
     justify-content: space-between;
@@ -20,14 +28,18 @@
   margin-bottom: 21px;
   padding: 10px 20px;
   background-color: $color-gray;
+
+  @include media-tablet {
+    margin-top: 0;
+    padding-top: 15px;
+    margin-bottom: 29px;
+  }
 }
 
 .offers__header {
   position: relative;
   margin-top: 19px;
-  /* margin-bottom: 10px;*/
   padding-left: 71px;
-  /*padding-top: 3px;*/
   color: $color-black;
   text-transform: uppercase;
   font-size: 24px;
@@ -70,23 +82,22 @@
   }
 }
 
-.offers__text {
-  margin-top: 30px;
-  margin-bottom: 22px;
-}
-
 @include media-tablet {
   .offers__header {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 61px;
     padding-right: 120px;
-    padding-left: 10px;
-    font-size: 24px;
+    padding-left: 38px;
+    font-size: 36px;
+    line-height: 37px;
 
     &::before {
-      top: 5px;
-      right: 5px;
+      top: 75px;
+      right: 45px;
       left: auto;
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
     }
 
     &::after {
@@ -96,6 +107,23 @@
       width: 100px;
       height: 100px;
     }
+
+    &--minus::after {
+      top: 64px;
+      right: 78px;
+      left: auto;
+      width: 140px;
+      height: 193px;
+    }
+
+    &--plus::after {
+      top: 122px;
+      right: 17px;
+      left: auto;
+      width: 266px;
+      height: 112px;
+    }
+
   }
 }
 
@@ -123,9 +151,25 @@
   }
 }
 
+.offers__text {
+  margin-top: 30px;
+  margin-bottom: 22px;
+
+  @include media-tablet {
+    margin-top: 24px;
+    margin-bottom: 36px;
+    margin-left: 37px;
+    width: 50%;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include font-arial-normal();
+  }
+}
+
 .offers__link {
-  display: block;
   position: relative;
+  display: block;
   padding-top: 20px;
   padding-bottom: 10px;
   border-top: solid 1px $color-gray-border;
@@ -151,7 +195,15 @@
 
 @include media-tablet {
   .offers__link {
+    border: none;
     font-size: 20px;
     line-height: 20px;
+    margin-left: 37px;
+    padding-bottom: 53px;
+
+    &::after {
+      left: 130px;
+    }
+
   }
 }

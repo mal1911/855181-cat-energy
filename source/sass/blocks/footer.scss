@@ -4,9 +4,13 @@
 }
 
 .footer__map {
-  margin-top: -28px;
+  margin-top: 9px;
   width: 100%;
-  z-index: -1;
+  height: 362px;
+  background-color: #fbf5e3;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-position: center -37px;
+  background-size: cover;
 }
 
 .footer__bottom {
@@ -23,7 +27,7 @@
 
 .footer__logo {
   display: block;
-  padding-top: 10px;
+  padding-top: 40px;
   padding-bottom: 10px;
   width: 100%;
   text-align: center;
@@ -36,13 +40,19 @@
 .footer__academy {
   display: flex;
   justify-content: space-between;
+  margin-top: 19px;
   width: 100%;
 }
 
 .footer__academy-text {
+  margin-top: 10px;
   color: $color-black-light;
   font-size: 16px;
   line-height: 16px;
 
   @include font-arial-normal();
+}
+
+.footer__academy-img {
+  margin-right: -7px;
 }

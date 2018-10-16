@@ -1,8 +1,11 @@
 .nav-main {
   position: relative;
 
+
+
   @include media-tablet {
-    width: 70%;
+    margin-top: 11px;
+    width: 62%;
   }
 
   @include media-desktop {
@@ -12,10 +15,10 @@
 
 .nav-main__toggle {
   position: absolute;
-  top: -34px;
-  left: 256px;
-  width: 24px;
-  height: 24px;
+  top: -42px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
   border: none;
   background-color: $color-white;
   background-image: url("../img/icon-close.svg");
@@ -29,6 +32,10 @@
 }
 
 .nav-main--closed .nav-main__toggle {
+  top: -45px;
+  right: 2px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/icon-mobile-menu.svg");
 }
 
