@@ -147,7 +147,7 @@
   @include font-oswald-regular();
   @include media-tablet {
     margin-top: 40px;
-    width: 176px;
+    width: 184px;
     text-align: right;
     font-size: 20px;
     line-height: 30px;
@@ -159,6 +159,6 @@
   height: 349px;
   @include media-tablet{
     margin-top: 20px;
-    height: 450px;
+    height: 680px;
   }
 }

@@ -6,23 +6,37 @@
 .footer__map {
   margin-top: 9px;
   width: 100%;
-  height: 362px;
+  height: 363px;
   background-color: #fbf5e3;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-position: center -37px;
   background-size: cover;
+
+  @include media-tablet {
+    height: 398px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-position: center -2px;
+    background-size: cover;
+  }
 }
 
 .footer__bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   background-color: $color-gray;
 }
 
 .footer__bottom .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0 20px;
   width: 100%;
+
+  @include media-tablet {
+    padding-top: 24px;
+    padding-right: 30px;
+    padding-bottom: 26px;
+    padding-left: 30px;
+  }
 }
 
 .footer__logo {
@@ -31,10 +45,18 @@
   padding-bottom: 10px;
   width: 100%;
   text-align: center;
+
+  @include media-tablet {
+    width: 131px;
+  }
 }
 
 .footer__social {
   width: 100%;
+
+  @include media-tablet {
+    width: auto;
+  }
 }
 
 .footer__academy {
@@ -42,6 +64,11 @@
   justify-content: space-between;
   margin-top: 19px;
   width: 100%;
+
+  @include media-tablet {
+    margin-top: 31px;
+    width: auto;
+  }
 }
 
 .footer__academy-text {
@@ -55,4 +82,8 @@
 
 .footer__academy-img {
   margin-right: -7px;
+
+  @include media-tablet {
+    margin-left: 17px;
+  }
 }
