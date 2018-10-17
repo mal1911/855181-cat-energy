@@ -31,6 +31,8 @@
 
 @include media-desktop {
   .motivation {
+    position: static;
+
     &::before {
       position: absolute;
       top: 0;
@@ -41,8 +43,8 @@
       width: 50%;
       background-color: $color-background-green;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-position: top right;
-      background-size: cover;
+      background-position: -31px -18px;
+      background-size: 97%;
       background-repeat: no-repeat;
       content: "";
     }
@@ -54,6 +56,10 @@
     padding-right: 150px;
     padding-left: 97px;
     text-align: left;
+  }
+  @include media-desktop {
+    margin-top: 51px;
+    width: 35%;
   }
 }
 
@@ -74,6 +80,9 @@
     font-size: 20px;
     line-height: 20px;
   }
+  @include media-desktop {
+    margin-top: 31px;
+  }
 }
 
 .motivation__image {
@@ -85,6 +94,13 @@
     margin-top: 3px;
     width: 709px;
     height: 609px;
+  }
+  @include media-desktop {
+    position: absolute;
+    top: 124px;
+    left: 634px;
+    width: 552px;
+    height: 499px;
   }
 }
 
@@ -102,6 +118,9 @@
     line-height: 20px;
   }
   @include media-desktop {
-    margin-bottom: 220px;
+    position: static;
+    margin-top: 52px;
+    margin-bottom: 268px;
+    margin-left: 99px;
   }
 }

@@ -1,6 +1,9 @@
 .footer {
   position: relative;
   margin-top: 13px;
+  @include media-desktop{
+    margin-top: 0;
+  }
 }
 
 .footer__map {
@@ -18,6 +21,15 @@
     background-position: center -2px;
     background-size: cover;
   }
+
+  @include media-desktop {
+    margin-top: 0;
+    height: 400px;
+    background-image: url("../img/bg-map-desktop@1x.png");
+    background-position: center top;
+    background-size: contain;
+  }
+
 }
 
 .footer__bottom {
@@ -36,6 +48,12 @@
     padding-right: 30px;
     padding-bottom: 26px;
     padding-left: 30px;
+  }
+
+  @include media-desktop {
+    padding-top: 23px;
+    padding-right: 41px;
+    padding-left: 38px;
   }
 }
 

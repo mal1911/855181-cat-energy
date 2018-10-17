@@ -1,5 +1,10 @@
 .catalog__header {
-  padding: 0 20px;
+  padding-top: 14px;
+  padding-right: 20px;
+  padding-bottom: 29px;
+  padding-left: 20px;
+  margin: 0;
+  border-top: 1px solid $color-gray-border;
   border-bottom: 1px solid $color-gray-border;
   font-size: 36px;
   line-height: 60px;
@@ -25,7 +30,6 @@
     width: 50%;
     border-bottom: none;
   }
-
   @include media-desktop {
     width: 25%;
   }

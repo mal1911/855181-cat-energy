@@ -3,20 +3,31 @@
   padding: 0 20px;
 
   @include media-tablet {
-    padding: 0 28px;
     display: flex;
     justify-content: space-between;
+    padding: 0 28px;
   }
+@include media-desktop{
+  padding: 0 40px;
+}
+
 }
 
 .header__logo {
   display: block;
   margin-bottom: 11px;
+  width: 190px;
 
   @include media-tablet {
     margin-top: 11px;
     width: 177px;
   }
+  @include media-desktop {
+    margin-top: 41px;
+    width: 200px;
+  }
+
+
 
   &:hover,
   &:focus {

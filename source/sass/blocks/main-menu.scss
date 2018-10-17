@@ -31,12 +31,11 @@
   line-height: 20px;
 
   @include font-oswald-medium();
-
   @include media-tablet {
+    padding-bottom: 5px;
     border: none;
     font-size: 18px;
     line-height: 24px;
-    padding-bottom: 5px;
 
     @include font-oswald-regular();
 
@@ -48,6 +47,12 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  @include media-desktop {
+    padding-bottom: 7px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 

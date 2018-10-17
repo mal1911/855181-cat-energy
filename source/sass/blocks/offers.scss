@@ -7,6 +7,10 @@
     margin-top: 0;
     padding: 0 25px;
   }
+
+  @include media-desktop {
+    padding: 0 40px;
+  }
 }
 
 .offers__list {
@@ -33,6 +37,11 @@
     margin-top: 0;
     padding-top: 15px;
     margin-bottom: 29px;
+  }
+
+  @include media-desktop {
+    padding: 0;
+    width: 570px;
   }
 }
 
@@ -99,7 +108,7 @@
       width: 200px;
       height: 200px;
     }
-
+    /*
     &::after {
       top: 5px;
       right: 5px;
@@ -107,7 +116,7 @@
       width: 100px;
       height: 100px;
     }
-
+*/
     &--minus::after {
       top: 64px;
       right: 78px;
@@ -123,30 +132,36 @@
       width: 266px;
       height: 112px;
     }
-
   }
 }
 
 @include media-desktop {
   .offers__header {
-    padding-right: 120px;
-    padding-left: 10px;
-    font-size: 24px;
+    margin-top: 17px;
+    padding-left: 214px;
+    font-size: 36px;
+    line-height: 37px;
 
     &::before {
-      top: 5px;
+      top: 32px;
       right: auto;
-      left: 5;
+      left: 53px;
       width: 100px;
       height: 100px;
     }
 
-    &::after {
-      top: 5px;
+    &--minus::after {
+      top: 26px;
       right: auto;
-      left: 5px;
-      width: 100px;
-      height: 100px;
+      left: 66px;
+      width: 68px;
+    }
+
+    &--plus::after {
+      top: 54px;
+      right: auto;
+      left: 33px;
+      width: 134px;
     }
   }
 }
@@ -164,6 +179,14 @@
     line-height: 24px;
 
     @include font-arial-normal();
+  }
+
+  @include media-desktop {
+    margin-top: 74px;
+    margin-bottom: 11px;
+    margin-left: 0;
+    padding: 0 53px;
+    width: auto;
   }
 }
 
@@ -204,6 +227,13 @@
     &::after {
       left: 130px;
     }
+  }
+}
+
+@include media-desktop {
+  .offers__link {
+    margin-left: 53px;
+    margin-bottom: 9px;
 
   }
 }

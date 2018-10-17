@@ -11,11 +11,15 @@
 <body>
   <header class="header container">
     <a class="header__logo" href="index.html">
-      <img class="header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Cat Energy">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="header__logo-image" src="img/logo-mobile.svg"  alt="Cat Energy">
+      </picture>
     </a>
     <nav class="nav-main nav-main--closed nav-main--nojs">
       <button class="nav-main__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <ul class="nav-main__list main-menu">
+      <ul class="nav-main__list main-menu main-menu--index">
         <li class="main-menu__item">
           <a class="main-menu__link" href="index.html">Главная</a>
         </li>
@@ -31,7 +35,7 @@
   <main class="main-catalog">
     <h1 class="main-catalog__header visually-hidden">Товары</h1>
     <section class="catalog container">
-      <h2 class="catalog__header">Каталог товаров</h2>
+      <h2 class="catalog__header">Каталог продукции</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
           <div class="catalog__block">
@@ -250,18 +254,21 @@
     <section class="contacts container">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__row">
-        <p class="contacts__slogan">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__slogan">приглашаем <br> к сотрудничеству дилеров!</p>
         <div class="contacts__col">
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
           <p class="contacts__city">Санкт-Петербург</p>
         </div>
       </div>
     </section>
-    <img class="footer__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Как к нам добраться">
+    <div class="footer__map">
+
+    </div>
     <div class="footer__bottom">
       <div class="container">
+
         <a class="footer__logo" href="index.html">
-          <img class="footer__logo-image" src="img/logo-footer.svg" width="180" height="50" alt="Cat Energy">
+          <img class="footer__logo-image" src="img/logo-footer.svg" width="135" alt="Cat Energy">
         </a>
         <ul class="footer__social social-menu">
           <li class="social-menu__item">
@@ -277,12 +284,13 @@
         <div class="footer__academy">
           <a href="https://up.htmlacademy.ru/adaptive/15" class="footer__academy-text">HTML Academy</a>
           <a href="https://up.htmlacademy.ru/adaptive/15" class="footer__academy-img"><img src="img/htmlacademy.svg"
-              width="30" height="30" alt="HTML Academy"></a>
+              width="40" alt="HTML Academy"></a>
         </div>
       </div>
+
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
+   <script src="js/scripts.js"></script>
 </body>
 
 </html>
