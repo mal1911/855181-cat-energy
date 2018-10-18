@@ -1,5 +1,10 @@
+.additional{
+  margin-bottom: 35px;
+}
+
 .additional .container {
   padding: 0 20px;
+
 
   @include media-desktop {
     display: flex;
@@ -18,12 +23,11 @@
 
   &::before {
     display: block;
-    margin: 20px auto;
-    width: 55px;
-    height: 60px;
+    width: 100%;
+    height: 126px;
     background-image: url("../img/icon-gift.svg");
-    background-position: top, center;
-    background-size: cover;
+    background-position: bottom, center;
+    background-size: 55px 60px;
     background-repeat: no-repeat;
     content: "";
   }
@@ -46,19 +50,27 @@
 }
 
 .additional__text {
+  text-align: center;
   color: $color-white;
   font-size: 16px;
   line-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 61px;
+  width: 157px;
 
   @include font-arial-normal();
 }
 
 .additional__list {
+  margin-top: 0;
+  margin-bottom: 40px;
   @include ul-reset;
 }
 
 .additional__item {
   border-bottom: 1px solid $color-gray-border;
+  border-top: 1px solid $color-gray-border;
 
   @include media-tablet {
     display: flex;
@@ -68,6 +80,8 @@
 }
 
 .additional__name {
+  margin-top: 15px;
+  margin-bottom: 0;
   color: $color-black2;
   text-transform: uppercase;
   font-size: 16px;
@@ -77,7 +91,8 @@
 }
 
 .additional__link {
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   @include media-tablet {
     width: 100%;
@@ -97,6 +112,8 @@
   color: $color-black-light;
   font-size: 14px;
   line-height: 14px;
+  margin-top: 12px;
+  margin-bottom: 0;
 
   @include font-arial-normal();
 }
@@ -105,6 +122,7 @@
   color: $color-black-light;
   font-size: 14px;
   line-height: 14px;
-
+  margin-top: 12px;
+  margin-bottom: 0;
   @include font-arial-normal();
 }

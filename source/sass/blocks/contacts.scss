@@ -1,8 +1,10 @@
 .contacts {
   padding: 0 20px;
-  background-color: $color-white;
+  background-color: transparent;
+
 
   @include media-tablet {
+    background-color: $color-white;
     padding: 0 72px;
   }
   @include media-desktop {

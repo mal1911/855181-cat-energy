@@ -1,9 +1,14 @@
 .footer {
   position: relative;
-  margin-top: 13px;
-  @include media-desktop{
+  padding-top: 13px;
+
+  @include media-desktop {
     margin-top: 0;
   }
+}
+
+.footer-catalog {
+  background-color: $color-gray;
 }
 
 .footer__map {
@@ -21,7 +26,6 @@
     background-position: center -2px;
     background-size: cover;
   }
-
   @include media-desktop {
     margin-top: 0;
     height: 400px;
@@ -29,7 +33,6 @@
     background-position: center top;
     background-size: contain;
   }
-
 }
 
 .footer__bottom {
@@ -49,7 +52,6 @@
     padding-bottom: 26px;
     padding-left: 30px;
   }
-
   @include media-desktop {
     padding-top: 23px;
     padding-right: 41px;
@@ -80,7 +82,7 @@
 .footer__academy {
   display: flex;
   justify-content: space-between;
-  margin-top: 19px;
+  margin-top: 4px;
   width: 100%;
 
   @include media-tablet {

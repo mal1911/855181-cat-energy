@@ -1,7 +1,21 @@
-.characteristics__item {
-  display: flex;
+.characteristics{
+  margin-top: 6px;
+
+  @include media-tablet{
+    width: 245px;
+  }
 }
 
+.characteristics__item {
+  display: flex;
+
+  @include media-tablet {
+    justify-content: space-between;
+    border-bottom: solid 1px $color-gray-border;
+  }
+}
+
+.characteristics__value,
 .characteristics__prop {
   width: 50px;
   color: $color-black-light;
@@ -9,13 +23,19 @@
   line-height: 16px;
 
   @include font-arial-normal();
+
+  @include media-tablet {
+    font-size: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
 }
 
-.characteristics__value {
-  width: 50px;
-  color: $color-black-light;
-  font-size: 12px;
-  line-height: 16px;
+.characteristics__prop {
+    text-align: left;
+ }
 
-  @include font-arial-normal();
+.characteristics__value{
+  text-align: right;
 }
+
