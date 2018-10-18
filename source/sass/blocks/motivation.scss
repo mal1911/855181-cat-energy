@@ -20,7 +20,7 @@
 
 @include media-tablet {
   .motivation {
-    text-align: center;
+    text-align: left;
 
     &::before {
       background-color: $color-white;
@@ -43,8 +43,8 @@
       width: 50%;
       background-color: $color-background-green;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-position: -31px -18px;
-      background-size: 97%;
+      background-position: left top;
+      background-size: 100%;
       background-repeat: no-repeat;
       content: "";
     }
@@ -52,49 +52,56 @@
 }
 
 .motivation .main-index__header {
-  margin-left: auto;
   margin-right: auto;
-  padding-top: 26px;
   margin-bottom: 0;
-  width: 260px;
+  margin-left: auto;
+  padding-top: 26px;
+  width: 275px;
   text-align: center;
 
   @include media-tablet {
-    padding-right: 150px;
-    padding-left: 97px;
+    position: static;
+    margin-top: 19px;
+    margin-left: 96px;
+    padding-right: auto;
+    padding-left: 0;
     text-align: left;
+    width: 450px;
   }
   @include media-desktop {
-    margin-top: 51px;
-    width: 35%;
+    margin-top: 70px;
+    width: 37%;
   }
 }
 
 .motivation__slogan {
-  margin-left: auto;
+  margin-top: 27px;
   margin-right: auto;
-  margin-top: 25px;
   margin-bottom: 0;
-  width: 200px;
-  text-align: center;
-
-  text-align: center;
+  margin-left: auto;
+  width: 210px;
   color: $color-white;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 14px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
-    margin-top: 29px;
-    padding-left: 97px;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 96px;
+    padding-right: auto;
+    padding-left: 0;
     color: $color-black;
     font-size: 20px;
     line-height: 20px;
+    width: 300px;
   }
+
   @include media-desktop {
-    margin-top: 31px;
+    margin-top: 41px;
   }
 }
 
@@ -104,14 +111,15 @@
   height: 271px;
 
   @include media-tablet {
-    margin-top: 3px;
+    margin-left: 11px;
+    margin-top: 16px;
     width: 709px;
     height: 609px;
   }
   @include media-desktop {
     position: absolute;
     top: 124px;
-    left: 634px;
+    left: 548px;
     width: 552px;
     height: 499px;
   }
@@ -122,7 +130,7 @@
 
   @include media-tablet {
     position: absolute;
-    top: 274px;
+    top: 254px;
     left: 118px;
     padding-top: 15px;
     padding-bottom: 15px;

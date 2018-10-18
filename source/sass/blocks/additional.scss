@@ -1,11 +1,13 @@
-.additional{
+.additional {
   margin-bottom: 35px;
 }
 
 .additional .container {
   padding: 0 20px;
 
-
+  @include media-tablet {
+    padding: 0 30px;
+  }
   @include media-desktop {
     display: flex;
     justify-content: space-between;
@@ -50,14 +52,14 @@
 }
 
 .additional__text {
-  text-align: center;
+  margin-top: 61px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 157px;
   color: $color-white;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 61px;
-  width: 157px;
 
   @include font-arial-normal();
 }
@@ -65,17 +67,24 @@
 .additional__list {
   margin-top: 0;
   margin-bottom: 40px;
+
   @include ul-reset;
+  @include media-tablet {
+    margin-top: 79px;
+  }
 }
 
 .additional__item {
-  border-bottom: 1px solid $color-gray-border;
   border-top: 1px solid $color-gray-border;
+  border-bottom: 1px solid $color-gray-border;
 
   @include media-tablet {
+    border: 1px solid $color-gray;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-right: 39px;
+    padding-left: 39px;
   }
 }
 
@@ -88,6 +97,12 @@
   line-height: 16px;
 
   @include font-oswald-regular();
+  @include media-tablet {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional__link {
@@ -95,9 +110,9 @@
   margin-bottom: 15px;
 
   @include media-tablet {
+    margin-bottom: 27px;
     width: 100%;
   }
-
   @include media-desktop {
     width: 200px;
   }
@@ -106,23 +121,41 @@
 .additional__prop {
   display: flex;
   justify-content: space-between;
+
+  @include media-tablet{
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
 }
 
 .additional__packaging {
+  margin-top: 12px;
+  margin-bottom: 0;
   color: $color-black-light;
   font-size: 14px;
   line-height: 14px;
-  margin-top: 12px;
-  margin-bottom: 0;
 
   @include font-arial-normal();
+  @include media-tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .additional__cost {
+  margin-top: 12px;
+  margin-bottom: 0;
   color: $color-black-light;
   font-size: 14px;
   line-height: 14px;
-  margin-top: 12px;
-  margin-bottom: 0;
+
   @include font-arial-normal();
+  @include media-tablet {
+    margin-top: 15px;
+    margin-left: 43px;
+    width: 50px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

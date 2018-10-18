@@ -24,6 +24,8 @@
 
 @include media-tablet {
   .color-header {
+    margin-top: 73px;
+    margin-left: 0;
     padding-left: 0;
     font-size: 36px;
     line-height: 36px;
@@ -31,19 +33,19 @@
     &::before {
       display: block;
       flex-shrink: 0;
-      margin-top: 18px;
-      margin-right: 10px;
-      width: 20px;
-      height: 4px;
+      margin-top: 20px;
+      margin-right: 36px;
+      width: 28px;
+      height: 3px;
       background-color: $color-green;
       content: "";
     }
 
     &::after {
-      margin-top: 18px;
-      margin-left: 10px;
+      margin-top: 20px;
+      margin-left: 36px;
       width: 95px;
-      height: 4px;
+      height: 3px;
     }
   }
 }
