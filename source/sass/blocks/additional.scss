@@ -1,5 +1,11 @@
 .additional {
   margin-bottom: 35px;
+  @include media-tablet{
+    margin-bottom: 76px;
+  }
+  @include media-desktop{
+    margin-bottom: 48px;
+  }
 }
 
 .additional .container {
@@ -9,6 +15,7 @@
     padding: 0 30px;
   }
   @include media-desktop {
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
   }
@@ -37,16 +44,32 @@
 
 @include media-tablet {
   .additional__advertising {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    margin-top: 70px;
+    /*display: flex;
+    justify-content: space-between;*/
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+    height: 200px;
+
+    &::before {
+      position: absolute;
+      left: 91px;
+      top: 63px;
+      width: 55px;
+      height: 60px;
+      background-image: url("../img/icon-gift.svg");
+      background-position: top, left;
+    }
+
+
   }
 }
 
 @include media-desktop {
   .additional__advertising {
-    flex-direction: column;
+    margin-top: 49px;
     width: 245px;
+    height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
   }
 }
@@ -62,6 +85,22 @@
   line-height: 20px;
 
   @include font-arial-normal();
+
+@include media-tablet{
+  text-align: left;
+  margin-left: 424px;
+  padding-top: 72px;
+
+}
+
+@include media-desktop{
+  text-align: center;
+  margin-left: 49px;
+  padding-top: 124px;
+}
+
+
+
 }
 
 .additional__list {
@@ -72,6 +111,13 @@
   @include media-tablet {
     margin-top: 79px;
   }
+
+  @include media-desktop {
+    margin-top: 47px;
+    width: 75%;
+
+  }
+
 }
 
 .additional__item {
@@ -86,6 +132,14 @@
     padding-right: 39px;
     padding-left: 39px;
   }
+
+@include media-desktop{
+  border-left: none;
+  border-right: none;
+  padding-right: 20px;
+  padding-left: 4px;
+}
+
 }
 
 .additional__name {
@@ -103,6 +157,10 @@
     font-size: 20px;
     line-height: 20px;
   }
+  @include media-desktop{
+    margin-bottom: 0;
+    width: 284px;
+  }
 }
 
 .additional__link {
@@ -115,6 +173,8 @@
   }
   @include media-desktop {
     width: 200px;
+    margin-bottom: 15px;
+
   }
 }
 
@@ -125,6 +185,11 @@
   @include media-tablet{
     justify-content: flex-end;
     margin-top: 15px;
+  }
+
+  @include media-desktop{
+    justify-content: space-between;
+    width: 296px;
   }
 }
 
@@ -139,6 +204,9 @@
   @include media-tablet {
     font-size: 16px;
     line-height: 20px;
+  }
+  @include media-desktop{
+    text-align: left;
   }
 }
 
@@ -158,4 +226,8 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+@include media-desktop{
+  text-align: left;
+}
 }

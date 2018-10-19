@@ -4,6 +4,11 @@
   @include media-tablet {
     width: 245px;
   }
+
+  @include media-desktop {
+    width: 168px;
+  }
+
 }
 
 .characteristics__item {

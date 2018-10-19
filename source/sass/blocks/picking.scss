@@ -3,13 +3,15 @@
 }
 
 .picking__text {
+  margin-top: 37px;
+  width: 242px;
   color: $color-black;
+  text-align: left;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
 
   @include font-oswald-regular();
-
   @include media-tablet {
     font-size: 20px;
     line-height: 30px;
@@ -25,6 +27,7 @@
 .picking__data {
   display: flex;
   flex-direction: column;
+  margin-top: 43px;
 }
 
 .picking__action {
@@ -45,13 +48,80 @@
   }
 }
 
+.picking__text-control{
+  display: flex;
+  align-items: center;
+  margin-bottom: 19px;
+  width: 100%;
+}
+
+.picking__text-input {
+  flex-grow: 1;
+  width: 50px;
+flex-shrink: 0;
+  border: 1px solid $color-gray-border;
+  color: $color-black-light;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+padding: 10px;
+  @include font-oswald-medium();
+}
+
+.picking__text-label {
+  flex-shrink: 0;
+  margin-right: 10px;
+  color: $color-black2;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  @include font-oswald-medium();
+}
+
+.picking__radio-button{
+  position: relative;
+display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid $color-gray-border;
+
+
+  &::before{
+    
+  }
+
+  &::after{
+    position: absolute;
+    top: 3px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+
+}
+
+.picking__radio-label{
+  padding-left: 30px;
+  width: 100px;
+  color: $color-black2;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  @include font-oswald-medium();
+}
+
+
 .picking__check-control {
   width: 100%;
 
   @include media-tablet {
     width: 50%;
   }
-
   @include media-desktop {
     width: 25%;
   }

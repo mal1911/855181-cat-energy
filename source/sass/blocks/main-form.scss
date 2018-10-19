@@ -6,8 +6,11 @@
 
   @include font-oswald-regular();
 
+  padding-top: 26px;
+
   @include media-tablet {
     font-size: 60px;
     line-height: 60px;
+
   }
 }

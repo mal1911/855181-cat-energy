@@ -52,13 +52,16 @@
 
 @include media-desktop {
   .color-header {
+    margin-top: 80px;
     &::before {
-      margin-right: 50px;
-      width: 50px;
+      margin-top: 22px;
+      margin-right: 40px;
+      width: 70px;
     }
 
     &::after {
-      margin-left: 50px;
+      margin-top: 22px;
+      margin-left: 33px;
       width: 300px;
     }
   }

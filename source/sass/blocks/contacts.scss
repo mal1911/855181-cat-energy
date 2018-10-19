@@ -4,7 +4,7 @@
 
 
   @include media-tablet {
-    background-color: $color-white;
+    /*background-color: $color-white;*/
     padding: 0 72px;
   }
   @include media-desktop {
@@ -22,8 +22,8 @@
   justify-content: space-between;
 
   @include media-tablet {
-    margin-top: 47px;
-    margin-bottom: 40px;
+    padding-top: 45px;
+    margin-bottom: 38px;
   }
   @include media-desktop {
     margin: 0;
