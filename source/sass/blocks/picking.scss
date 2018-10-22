@@ -1,5 +1,14 @@
 .picking .container {
   padding: 0 20px;
+
+  @include media-tablet {
+    padding: 0 30px;
+  }
+
+  @include media-desktop{
+    padding: 0 40px;
+
+  }
 }
 
 .picking__text {
@@ -13,59 +22,192 @@
 
   @include font-oswald-regular();
   @include media-tablet {
+    margin-top: 54px;
+    margin-left: 40px;
+    width: 345px;
     font-size: 20px;
+    font-size: 20px;
+    line-height: 20px;
     line-height: 30px;
+  }
+  @include media-desktop{
+    margin-top: 58px;
+    margin-left: 0;
   }
 }
 
 .picking__basis {
+  border-bottom: 1px solid $color-gray;
+
   @include media-desktop {
     display: flex;
+    align-items: flex-start;
   }
+}
+
+.picking__basis .container {
 }
 
 .picking__data {
   display: flex;
   flex-direction: column;
-  margin-top: 43px;
-}
+  margin-top: 40px;
 
-.picking__action {
-  display: flex;
-  flex-direction: column;
+  @include media-tablet {
+    margin-top: 65px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  @include media-desktop {
+    box-sizing: border-box;
+    width: 50%;
+    margin-top: 46px;
+    padding: 0;
+    padding-right: 41px;
+  }
 }
 
 .picking__contacts .container {
+  margin-top: 37px;
+
+  @include media-tablet {
+    margin-top: 76px;
+    margin-bottom: -9px;
+    padding-right: 65px;
+    padding-left: 71px;
+  }
   @include media-desktop {
     display: flex;
   }
 }
 
-.picking__additionally .container {
+.picking__comments .container {
+  margin-bottom: -5px;
+  padding-right: 48px;
+  padding-left: 18px;
+
   @include media-tablet {
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 72px;
+    margin-bottom: -8px;
+    padding-right: 96px;
+    padding-left: 68px;
   }
 }
 
-.picking__text-control{
+.picking__additionally .container {
+  margin-top: 43px;
+
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 22px;
+    padding-left: 82px;
+  }
+}
+
+
+
+.picking__action {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet {
+    margin-top: 51px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 32px;
+    padding-bottom: 3px;
+    padding-left: 42px;
+    width: auto;
+    border: 1px solid $color-gray-border;
+  }
+
+  @include media-desktop{
+    flex-grow: 1;
+    /*width: 50%;*/
+
+    margin-top: 46px;
+    margin-right: 0;
+    /*padding-bottom: 10px;
+    /*padding-left: 42px;
+    padding-right: 40px;
+    /*
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 32px;
+    padding-bottom: 3px;
+
+*/
+
+  }
+
+}
+
+.picking__text-control {
   display: flex;
   align-items: center;
-  margin-bottom: 19px;
+  margin-bottom: 15px;
   width: 100%;
+
+  @include media-tablet {
+    margin-bottom: 19px;
+  }
 }
 
 .picking__text-input {
   flex-grow: 1;
+  flex-shrink: 0;
+  padding: 12px;
   width: 50px;
-flex-shrink: 0;
   border: 1px solid $color-gray-border;
   color: $color-black-light;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-padding: 10px;
+
   @include font-oswald-medium();
+  @include media-tablet {
+    padding: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.picking__text-control--email {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    width: 17px;
+    height: 13px;
+    background-image: url("../img/icon-mail.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.picking__text-control--tel {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    width: 17px;
+    height: 13px;
+    background-image: url("../img/icon-phone.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.picking__text-control--tel .picking__text-input,
+.picking__text-control--email .picking__text-input {
+  padding-right: 20px;
 }
 
 .picking__text-label {
@@ -75,60 +217,220 @@ padding: 10px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-  @include font-oswald-medium();
+
+  @include font-oswald-regular();
+  @include media-tablet {
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
-.picking__radio-button{
+.picking__radio-button {
   position: relative;
-display: block;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1px solid $color-gray-border;
-
-
-  &::before{
-    
-  }
-
-  &::after{
-    position: absolute;
-    top: 3px;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    background-position: center;
-    background-repeat: no-repeat;
-    content: '';
-  }
-
-
-}
-
-.picking__radio-label{
-  padding-left: 30px;
-  width: 100px;
+  margin-bottom: 24px;
+  margin-left: 46px;
   color: $color-black2;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-  @include font-oswald-medium();
+
+  @include font-oswald-regular();
+
+  &::before {
+    position: absolute;
+    top: -7px;
+    left: -46px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid $color-gray-border;
+    border-radius: 50%;
+    content: "";
+  }
 }
 
+.picking__radio-input:checked + .picking__radio-button {
+  &::after {
+    position: absolute;
+    top: 2px;
+    left: -37px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: $color-background-green;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+@include media-tablet {
+  .picking__radio-button {
+    margin-bottom: 33px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      top: -10px;
+      left: -61px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .picking__radio-input:checked + .picking__radio-button {
+    &::after {
+      top: 2px;
+      left: -49px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.picking__textarea {
+  margin-top: 2px;
+  padding: 13px 13px;
+  width: 100%;
+  height: 121px;
+  border: 1px solid $color-gray-border;
+  color: $color-black-light;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  resize: none;
+
+  @include font-oswald-regular();
+  @include media-tablet {
+    margin-top: 2px;
+    padding: 13px 13px;
+    height: 146px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 
 .picking__check-control {
+  margin-bottom: 22px;
   width: 100%;
 
   @include media-tablet {
-    width: 50%;
+    margin-bottom: 49px;
+    width: 250px;
+
   }
   @include media-desktop {
     width: 25%;
   }
 }
 
+.picking__check-control:nth-child(2n) {
+  @include media-tablet {
+    margin-left: 95px;
+  }
+}
+
+.picking__check-box {
+  position: relative;
+  margin-bottom: 24px;
+  margin-left: 46px;
+  color: $color-black2;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+
+  @include font-oswald-regular();
+
+  &::before {
+    position: absolute;
+    top: -3px;
+    left: -46px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid $color-gray-border;
+    content: "";
+  }
+}
+
+@include media-tablet {
+  .picking__check-box {
+    font-size: 20px;
+    line-height: 20px;
+    &::before {
+      top: -6px;
+      left: -60px;
+      width: 38px;
+      height: 38px;
+    }
+  }
+}
+
+.picking__check-input:checked + .picking__check-box {
+  &::after {
+    position: absolute;
+    top: 2px;
+    left: -46px;
+    width: 30px;
+    height: 18px;
+    background-image: url("../img/icon-tick.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+@include media-tablet{
+  .picking__check-input:checked + .picking__check-box {
+    &::after {
+      top: 5px;
+      left: -50px;
+      width: 24px;
+      height: 18px;
+    }
+  }
+}
+
 .picking__button-control {
+  margin-top: 38px;
+
   @include media-tablet {
     display: flex;
+    margin-top: 12px;
+    padding-left: 40px;
+
+  }
+}
+
+.picking__button {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include font-oswald-regular();
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 40px;
+    height: 52px;
+    width: 283px;
+  }
+}
+
+.picking__note {
+  margin-top: 20px;
+  margin-bottom: 29px;
+  text-align: center;
+
+  @include media-tablet{
+    margin-top: 16px;
+    margin-left: 59px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 93px;
+
   }
 }
