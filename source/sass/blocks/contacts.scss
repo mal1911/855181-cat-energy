@@ -4,10 +4,10 @@
 
 
   @include media-tablet {
-    /*background-color: $color-white;*/
     padding: 0 72px;
   }
   @include media-desktop {
+    background-color: $color-white;
     position: absolute;
     top: 91px;
     left: 112px;
