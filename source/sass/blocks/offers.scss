@@ -17,9 +17,11 @@
   margin-top: 10px;
 
   @include ul-reset();
+
   @include media-tablet {
     margin-top: 0;
   }
+
   @include media-desktop {
     display: flex;
     justify-content: space-between;
@@ -108,15 +110,7 @@
       width: 200px;
       height: 200px;
     }
-    /*
-    &::after {
-      top: 5px;
-      right: 5px;
-      left: auto;
-      width: 100px;
-      height: 100px;
-    }
-*/
+
     &--minus::after {
       top: 64px;
       right: 78px;
@@ -234,6 +228,5 @@
   .offers__link {
     margin-left: 53px;
     margin-bottom: 9px;
-
   }
 }

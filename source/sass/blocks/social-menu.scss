@@ -8,6 +8,7 @@
   border-bottom: 1px solid $color-gray-border;
 
   @include ul-reset();
+
   @include media-tablet {
     margin-left: 23px;
     border-top: none;

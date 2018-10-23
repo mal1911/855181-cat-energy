@@ -4,9 +4,9 @@
   @include media-tablet {
     padding: 0 30px;
   }
-  @include media-desktop{
-    padding: 0 40px;
 
+  @include media-desktop {
+    padding: 0 40px;
   }
 }
 
@@ -20,16 +20,16 @@
   line-height: 18px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     margin-top: 54px;
     margin-left: 40px;
     width: 345px;
     font-size: 20px;
-    font-size: 20px;
     line-height: 20px;
-    line-height: 30px;
   }
-  @include media-desktop{
+
+  @include media-desktop {
     margin-top: 58px;
     margin-left: 0;
   }
@@ -45,7 +45,6 @@
   }
 }
 
-
 .picking__data {
   display: flex;
   flex-direction: column;
@@ -56,6 +55,7 @@
     padding-right: 40px;
     padding-left: 40px;
   }
+
   @include media-desktop {
     box-sizing: border-box;
     margin-top: 46px;
@@ -76,6 +76,7 @@
     padding-right: 65px;
     padding-left: 71px;
   }
+
   @include media-desktop {
     display: flex;
     justify-content: space-between;
@@ -83,20 +84,8 @@
     margin-bottom: 47px;
     padding-right: 40px;
     padding-left: 40px;
-
   }
 }
-/*
-.picking__text-control--email{
-  /*margin-left: 20px;*/
-
-/*}
-
-.picking__text-control--tel{
-  @include media-desktop{
-    margin-left: 72px;
-  }
-}*/
 
 .picking__comments .container {
   margin-bottom: -5px;
@@ -109,7 +98,8 @@
     padding-right: 96px;
     padding-left: 68px;
   }
-  @include media-desktop{
+
+  @include media-desktop {
     margin-top: 72px;
     margin-bottom: 66px;
     padding-right: 78px;
@@ -127,14 +117,12 @@
     padding-top: 22px;
     padding-left: 82px;
   }
-  @include media-desktop{
+
+  @include media-desktop {
     padding-right: 40px;
     padding-left: 54px;
-
   }
 }
-
-
 
 .picking__action {
   display: flex;
@@ -151,24 +139,12 @@
     width: auto;
     border: 1px solid $color-gray-border;
   }
-  @include media-desktop{
+
+  @include media-desktop {
     flex-grow: 1;
-    /*width: 50%;*/
     margin-top: 46px;
     margin-right: 0;
-    /*padding-bottom: 10px;
-    /*padding-left: 42px;
-    padding-right: 40px;
-    /*
-    margin-right: 40px;
-    margin-left: 40px;
-    padding-top: 32px;
-    padding-bottom: 3px;
-
-*/
-
   }
-
 }
 
 .picking__text-control {
@@ -180,7 +156,8 @@
   @include media-tablet {
     margin-bottom: 19px;
   }
-  @include media-desktop{
+
+  @include media-desktop {
     width: 571px;
   }
 }
@@ -197,6 +174,7 @@
   line-height: 18px;
 
   @include font-oswald-medium();
+
   @include media-tablet {
     padding: 16px;
     font-size: 20px;
@@ -206,6 +184,7 @@
 
 .picking__text-control--email {
   position: relative;
+
   &::before {
     position: absolute;
     top: 13px;
@@ -221,6 +200,7 @@
 
 .picking__text-control--tel {
   position: relative;
+
   &::before {
     position: absolute;
     top: 13px;
@@ -248,6 +228,7 @@
   line-height: 18px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     margin-right: 20px;
     font-size: 20px;
@@ -331,6 +312,7 @@
   resize: none;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     margin-top: 2px;
     padding: 13px 13px;
@@ -338,12 +320,11 @@
     font-size: 20px;
     line-height: 20px;
   }
-@include media-desktop{
-  padding: 18px 18px;
-  height: 137px;
 
-}
-
+  @include media-desktop {
+    padding: 18px 18px;
+    height: 137px;
+  }
 }
 
 .picking__check-control {
@@ -353,7 +334,6 @@
   @include media-tablet {
     margin-bottom: 49px;
     width: 250px;
-
   }
 
   @include media-desktop {
@@ -366,18 +346,17 @@
   @include media-tablet {
     margin-left: 95px;
   }
+
   @include media-desktop {
     margin-left: 0;
   }
-
 }
 
 .picking__check-control:last-child {
-  @include media-desktop{
+  @include media-desktop {
     margin-right: 0;
   }
 }
-
 
 .picking__check-box {
   position: relative;
@@ -406,6 +385,7 @@
   .picking__check-box {
     font-size: 20px;
     line-height: 20px;
+
     &::before {
       top: -6px;
       left: -60px;
@@ -429,7 +409,7 @@
   }
 }
 
-@include media-tablet{
+@include media-tablet {
   .picking__check-input:checked + .picking__check-box {
     &::after {
       top: 5px;
@@ -447,9 +427,9 @@
     display: flex;
     margin-top: 12px;
     padding-left: 40px;
-
   }
-  @include media-desktop{
+
+  @include media-desktop {
     margin-top: 20px;
   }
 }
@@ -461,6 +441,7 @@
   line-height: 20px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     margin-left: 40px;
     width: 283px;
@@ -469,12 +450,10 @@
     line-height: 20px;
   }
 
-@include media-desktop{
-  margin-left: 0;
-  width: 570px;
-
-}
-
+  @include media-desktop {
+    margin-left: 0;
+    width: 570px;
+  }
 }
 
 .picking__note {
@@ -482,19 +461,17 @@
   margin-bottom: 29px;
   text-align: center;
 
-  @include media-tablet{
+  @include media-tablet {
     margin-top: 16px;
     margin-bottom: 93px;
     margin-left: 59px;
     text-align: left;
     font-size: 16px;
     line-height: 16px;
-
   }
 
-  @include media-desktop{
+  @include media-desktop {
     margin-left: 80px;
     margin-bottom: 103px;
-
   }
 }

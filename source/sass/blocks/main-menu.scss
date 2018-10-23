@@ -2,6 +2,7 @@
   margin: 0;
 
   @include ul-reset();
+
   @include media-tablet {
     display: flex;
     justify-content: space-between;
@@ -31,6 +32,7 @@
   line-height: 20px;
 
   @include font-oswald-medium();
+
   @include media-tablet {
     padding-bottom: 5px;
     border: none;

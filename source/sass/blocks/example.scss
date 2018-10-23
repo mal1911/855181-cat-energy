@@ -6,12 +6,9 @@
     margin-top: 26px;
     background-color: inherit;
   }
+
   @include media-desktop {
-    background-image: linear-gradient(
-      to bottom,
-      $color-white 150px,
-      $color-gray 150px
-    );
+    background-image: linear-gradient(to bottom, $color-white 150px, $color-gray 150px);
   }
 }
 
@@ -23,6 +20,7 @@
   @include media-tablet {
     padding: 0 30px;
   }
+
   @include media-desktop {
     flex-direction: row;
     margin-top: 32px;
@@ -38,9 +36,11 @@
   line-height: 60px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     font-size: 60px;
   }
+
   @include media-desktop {
     margin-bottom: 146px;
   }
@@ -55,6 +55,7 @@
     font-size: 16px;
     line-height: 24px;
   }
+
   @include media-desktop {
     width: 433px;
   }
@@ -69,6 +70,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
   @include media-desktop {
     flex-direction: column;
   }
@@ -81,9 +83,11 @@
   margin-bottom: 5px;
 
   @include ul-reset;
+
   @include media-tablet {
     margin-top: 32px;
   }
+
   @include media-desktop {
     justify-content: flex-start;
     margin-top: 49px;
@@ -117,6 +121,7 @@
   line-height: 24px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     margin-top: 17px;
     margin-bottom: 15px;
@@ -138,6 +143,7 @@
   line-height: 12px;
 
   @include font-arial-normal();
+
   @include media-tablet {
     top: 58px;
     left: 6px;
@@ -146,6 +152,7 @@
     font-size: 14px;
     line-height: 14px;
   }
+
   @include media-desktop {
     background-color: $color-gray;
   }
@@ -160,6 +167,7 @@
   line-height: 20px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     margin-top: 40px;
     width: 184px;
@@ -167,6 +175,7 @@
     font-size: 20px;
     line-height: 30px;
   }
+
   @include media-desktop {
     margin-top: 49px;
     width: auto;
@@ -192,5 +201,4 @@
   @include media-desktop {
     height: 595px;
   }
-
 }

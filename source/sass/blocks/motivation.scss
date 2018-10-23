@@ -68,6 +68,7 @@
     text-align: left;
     width: 450px;
   }
+
   @include media-desktop {
     margin-top: 70px;
     width: 37%;
@@ -116,6 +117,7 @@
     width: 709px;
     height: 609px;
   }
+
   @include media-desktop {
     position: absolute;
     top: 124px;
@@ -138,6 +140,7 @@
     font-size: 20px;
     line-height: 20px;
   }
+
   @include media-desktop {
     position: static;
     margin-top: 52px;

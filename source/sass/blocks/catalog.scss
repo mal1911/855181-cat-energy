@@ -2,9 +2,10 @@
   @include media-tablet {
     padding: 0 30px;
   }
+
   @include media-desktop {
-    padding: 0 40px;
     margin-bottom: 80px;
+    padding: 0 40px;
   }
 }
 
@@ -14,19 +15,21 @@
   padding-right: 20px;
   padding-bottom: 29px;
   padding-left: 20px;
-  /*border-top: 1px solid $color-gray-border;*/
   border-bottom: 1px solid $color-gray-border;
   font-size: 36px;
   line-height: 60px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     padding-top: 42px;
     padding-right: 0;
     padding-bottom: 20px;
     padding-left: 0;
+    border: none;
     font-size: 60px;
   }
+
   @include media-desktop {
     padding-top: 59px;
     padding-bottom: 22px;
@@ -41,6 +44,7 @@
   margin: 0;
 
   @include ul-reset();
+
   @include media-desktop {
     align-content: flex-start;
     justify-content: space-between;
@@ -58,6 +62,7 @@
     width: 50%;
     border-bottom: none;
   }
+
   @include media-desktop {
     width: 247px;
   }
@@ -82,9 +87,9 @@
     &--all {
       border: 1px solid $color-gray-border;
       background-color: $color-white;
-
     }
   }
+
   @include media-desktop {
     margin-top: 143px;
     margin-right: 0;
@@ -116,11 +121,6 @@
   @include media-tablet {
     align-items: center;
     margin-top: 20px;
-  }
-  @include media-desktop {
-    /*width: 200px;
-    /*margin-left: 10px;
-    margin-right: 10px;*/
   }
 }
 
@@ -193,7 +193,6 @@
   .catalog__text {
     margin-top: 29px;
     margin-right: auto;
-    /*padding-bottom: 41px;*/
     margin-bottom: 41px;
     margin-left: auto;
     padding-left: 0;
@@ -205,16 +204,15 @@
 
 @include media-desktop {
   .catalog__text {
-    /*padding-bottom: 75px;*/
     margin-bottom: 75px;
   }
 }
-
 
 .catalog__link {
   margin-top: -4px;
   margin-bottom: 24px;
   width: 100%;
+
   &--all {
     margin-top: 10px;
     background-color: $color-gray;
@@ -233,9 +231,9 @@
 @include media-desktop {
   .catalog__link {
     width: 129px;
+
     &--all {
       margin-top: 0;
-
     }
   }
 }
@@ -247,6 +245,7 @@
     margin-top: -45px;
     width: 324px;
   }
+
   @include media-desktop {
     width: 245px;
   }
@@ -257,6 +256,7 @@
     margin-top: -81px;
     height: 208px;
   }
+
   @include media-desktop {
     height: 208px;
   }

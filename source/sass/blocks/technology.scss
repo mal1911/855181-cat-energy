@@ -8,6 +8,7 @@
     padding-bottom: 28px;
     border-bottom: 1px solid $color-gray;
   }
+
   @include media-desktop {
     padding: 0 40px;
   }
@@ -20,6 +21,7 @@
   line-height: 60px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     font-size: 60px;
   }
@@ -29,6 +31,7 @@
   margin-top: 26px;
 
   @include ul-reset();
+
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
@@ -149,6 +152,7 @@
   line-height: 18px;
 
   @include font-arial-normal();
+
   @include media-tablet {
     margin-top: 33px;
     margin-bottom: 60px;
