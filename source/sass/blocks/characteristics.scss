@@ -12,6 +12,8 @@
 
 .characteristics__item {
   display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @include media-tablet {
     justify-content: space-between;

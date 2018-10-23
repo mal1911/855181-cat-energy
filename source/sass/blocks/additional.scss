@@ -4,6 +4,7 @@
   @include media-tablet {
     margin-bottom: 76px;
   }
+
   @include media-desktop {
     margin-bottom: 48px;
   }
@@ -15,6 +16,7 @@
   @include media-tablet {
     padding: 0 30px;
   }
+
   @include media-desktop {
     display: flex;
     justify-content: space-between;
@@ -28,7 +30,6 @@
 }
 
 .additional .container-header {
-
   &::after {
     width: 71px;
   }
@@ -95,11 +96,13 @@
   line-height: 20px;
 
   @include font-arial-normal();
+
   @include media-tablet {
     margin-left: 424px;
     padding-top: 72px;
     text-align: left;
   }
+
   @include media-desktop {
     margin-left: 49px;
     padding-top: 124px;
@@ -112,9 +115,11 @@
   margin-bottom: 40px;
 
   @include ul-reset;
+
   @include media-tablet {
     margin-top: 79px;
   }
+
   @include media-desktop {
     margin-top: 47px;
     width: 75%;
@@ -133,6 +138,7 @@
     padding-left: 39px;
     border: 1px solid $color-gray;
   }
+
   @include media-desktop {
     padding-right: 20px;
     padding-left: 4px;
@@ -150,12 +156,14 @@
   line-height: 16px;
 
   @include font-oswald-regular();
+
   @include media-tablet {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 20px;
     line-height: 20px;
   }
+
   @include media-desktop {
     margin-bottom: 0;
     width: 284px;
@@ -170,6 +178,7 @@
     margin-bottom: 27px;
     width: 100%;
   }
+
   @include media-desktop {
     margin-bottom: 15px;
     width: 200px;
@@ -184,6 +193,7 @@
     justify-content: flex-end;
     margin-top: 15px;
   }
+
   @include media-desktop {
     justify-content: space-between;
     width: 296px;
@@ -198,10 +208,12 @@
   line-height: 14px;
 
   @include font-arial-normal();
+
   @include media-tablet {
     font-size: 16px;
     line-height: 20px;
   }
+
   @include media-desktop {
     text-align: left;
   }
@@ -215,6 +227,7 @@
   line-height: 14px;
 
   @include font-arial-normal();
+
   @include media-tablet {
     margin-top: 15px;
     margin-left: 43px;
@@ -223,6 +236,7 @@
     font-size: 16px;
     line-height: 20px;
   }
+
   @include media-desktop {
     text-align: left;
   }

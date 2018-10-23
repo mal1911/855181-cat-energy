@@ -11,7 +11,6 @@
 }
 
 .picking__header .container-header {
-
   &::after {
     width: 115px;
   }
@@ -46,9 +45,11 @@
   border-bottom: 1px solid $color-gray;
   margin-bottom: 37px;
 
-  @include media-tablet{
+  @include media-tablet {
+    border: none;
     margin-bottom: 76px;
   }
+
   @include media-desktop {
     display: flex;
     align-items: flex-start;
@@ -99,9 +100,6 @@
   }
 }
 
-.picking__comments {
-  /*padding-top: 18px;*/
-}
 
 .picking__comments .container {
   margin-top: 32px;
@@ -122,7 +120,7 @@
   }
 }
 
-.picking__additionally{
+.picking__additionally {
   padding-top: 10px;
 }
 

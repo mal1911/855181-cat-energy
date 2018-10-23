@@ -8,3 +8,10 @@
     max-width: $width-desktop;
   }
 }
+
+.container-header {
+  @include media-desktop {
+    width: $width-desktop;
+    margin: 0 0;
+  }
+}
