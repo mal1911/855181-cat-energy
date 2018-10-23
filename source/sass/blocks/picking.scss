@@ -10,6 +10,13 @@
   }
 }
 
+.picking__header .container-header {
+
+  &::after {
+    width: 115px;
+  }
+}
+
 .picking__text {
   margin-top: 37px;
   width: 242px;
@@ -26,7 +33,7 @@
     margin-left: 40px;
     width: 345px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
   }
 
   @include media-desktop {
@@ -37,7 +44,11 @@
 
 .picking__basis {
   border-bottom: 1px solid $color-gray;
+  margin-bottom: 37px;
 
+  @include media-tablet{
+    margin-bottom: 76px;
+  }
   @include media-desktop {
     display: flex;
     align-items: flex-start;
@@ -68,11 +79,12 @@
 }
 
 .picking__contacts .container {
-  margin-top: 37px;
+  margin-top: 32px;
+  margin-bottom: 31px;
 
   @include media-tablet {
     margin-top: 76px;
-    margin-bottom: -9px;
+    margin-bottom: 63px;
     padding-right: 65px;
     padding-left: 71px;
   }
@@ -87,34 +99,41 @@
   }
 }
 
+.picking__comments {
+  /*padding-top: 18px;*/
+}
+
 .picking__comments .container {
-  margin-bottom: -5px;
+  margin-top: 32px;
+  margin-bottom: 18px;
   padding-right: 48px;
   padding-left: 18px;
 
   @include media-tablet {
     margin-top: 72px;
-    margin-bottom: -8px;
+    margin-bottom: 55px;
     padding-right: 96px;
     padding-left: 68px;
   }
 
   @include media-desktop {
-    margin-top: 72px;
-    margin-bottom: 66px;
     padding-right: 78px;
     padding-left: 41px;
   }
 }
 
+.picking__additionally{
+  padding-top: 10px;
+}
+
 .picking__additionally .container {
-  margin-top: 43px;
+  margin-top: 40px;
 
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-top: 22px;
+    padding-top: 26px;
     padding-left: 82px;
   }
 
@@ -128,6 +147,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 36px;
+  margin-bottom: -4px;
 
   @include media-tablet {
     margin-top: 51px;

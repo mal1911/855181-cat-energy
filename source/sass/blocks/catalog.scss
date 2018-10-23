@@ -1,6 +1,7 @@
 .catalog {
   @include media-tablet {
     padding: 0 30px;
+    margin-bottom: 73px;
   }
 
   @include media-desktop {
