@@ -109,12 +109,13 @@
 
   @include media-tablet {
     margin-top: 72px;
-    margin-bottom: 55px;
+    margin-bottom: 48px;
     padding-right: 96px;
     padding-left: 68px;
   }
 
   @include media-desktop {
+    margin-bottom: 53px;
     padding-right: 78px;
     padding-left: 41px;
   }
@@ -136,6 +137,7 @@
   }
 
   @include media-desktop {
+    padding-top: 29px;
     padding-right: 40px;
     padding-left: 54px;
   }
@@ -332,8 +334,8 @@
   @include font-oswald-regular();
 
   @include media-tablet {
-    margin-top: 2px;
-    padding: 13px 13px;
+    margin-top: 5px;
+    padding: 16px 16px;
     height: 146px;
     font-size: 20px;
     line-height: 20px;

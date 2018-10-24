@@ -65,8 +65,8 @@
     margin-left: 96px;
     padding-right: auto;
     padding-left: 0;
-    text-align: left;
     width: 450px;
+    text-align: left;
   }
 
   @include media-desktop {
@@ -90,15 +90,15 @@
   @include font-oswald-regular();
 
   @include media-tablet {
-    text-align: left;
     margin-top: 40px;
     margin-left: 96px;
     padding-right: auto;
     padding-left: 0;
+    width: 300px;
     color: $color-black;
+    text-align: left;
     font-size: 20px;
     line-height: 20px;
-    width: 300px;
   }
 
   @include media-desktop {
@@ -112,18 +112,19 @@
   height: 271px;
 
   @include media-tablet {
-    margin-left: 11px;
     margin-top: 16px;
+    margin-left: 11px;
     width: 709px;
     height: 609px;
   }
 
   @include media-desktop {
     position: absolute;
-    top: 124px;
-    left: 548px;
+    top: 377px;
+    left: 57%;
     width: 552px;
     height: 499px;
+    transform: translate(-50%, -50%);
   }
 }
 
