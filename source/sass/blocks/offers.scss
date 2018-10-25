@@ -1,9 +1,26 @@
 .offers {
+  margin-top: 22px;
+  margin-bottom: 0;
   padding: 0 20px;
+
+  @include media-tablet {
+    margin-top: 0;
+    padding: 0 25px;
+  }
+
+  @include media-desktop {
+    padding: 0 40px;
+  }
 }
 
 .offers__list {
+  margin-top: 10px;
+
   @include ul-reset();
+
+  @include media-tablet {
+    margin-top: 0;
+  }
 
   @include media-desktop {
     display: flex;
@@ -14,14 +31,26 @@
 .offers__item {
   box-sizing: border-box;
   margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 10px;
+  margin-bottom: 21px;
+  padding: 10px 20px;
   background-color: $color-gray;
+
+  @include media-tablet {
+    margin-top: 0;
+    padding-top: 15px;
+    margin-bottom: 29px;
+  }
+
+  @include media-desktop {
+    padding: 0;
+    width: 570px;
+  }
 }
 
 .offers__header {
   position: relative;
-  padding-left: 70px;
+  margin-top: 19px;
+  padding-left: 71px;
   color: $color-black;
   text-transform: uppercase;
   font-size: 24px;
@@ -31,10 +60,10 @@
 
   &::before {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 40px;
-    height: 40px;
+    top: -4px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: $color-green;
     content: "";
@@ -42,74 +71,125 @@
 
   &::after {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 40px;
-    height: 40px;
     background-position: top, left;
     background-repeat: no-repeat;
     content: "";
   }
 
   &--minus::after {
+    top: -9px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
     background-image: url("../img/icon-cat-slim.svg");
   }
 
   &--plus::after {
+    top: 7px;
+    left: -7px;
+    width: 67px;
+    height: 40px;
     background-image: url("../img/icon-cat-pro.svg");
   }
 }
 
 @include media-tablet {
   .offers__header {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 61px;
     padding-right: 120px;
-    padding-left: 10px;
-    font-size: 24px;
+    padding-left: 38px;
+    font-size: 36px;
+    line-height: 37px;
 
     &::before {
-      top: 5px;
-      right: 5px;
+      top: 75px;
+      right: 45px;
       left: auto;
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
     }
 
-    &::after {
-      top: 5px;
-      right: 5px;
+    &--minus::after {
+      top: 64px;
+      right: 78px;
       left: auto;
-      width: 100px;
-      height: 100px;
+      width: 140px;
+      height: 193px;
+    }
+
+    &--plus::after {
+      top: 122px;
+      right: 17px;
+      left: auto;
+      width: 266px;
+      height: 112px;
     }
   }
 }
 
 @include media-desktop {
   .offers__header {
-    padding-right: 120px;
-    padding-left: 10px;
-    font-size: 24px;
+    margin-top: 17px;
+    padding-left: 214px;
+    font-size: 36px;
+    line-height: 37px;
 
     &::before {
-      top: 5px;
+      top: 32px;
       right: auto;
-      left: 5;
+      left: 53px;
       width: 100px;
       height: 100px;
     }
 
-    &::after {
-      top: 5px;
+    &--minus::after {
+      top: 26px;
       right: auto;
-      left: 5px;
-      width: 100px;
-      height: 100px;
+      left: 66px;
+      width: 68px;
     }
+
+    &--plus::after {
+      top: 54px;
+      right: auto;
+      left: 33px;
+      width: 134px;
+    }
+  }
+}
+
+.offers__text {
+  margin-top: 30px;
+  margin-bottom: 22px;
+
+  @include media-tablet {
+    margin-top: 24px;
+    margin-bottom: 36px;
+    margin-left: 37px;
+    width: 50%;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include font-arial-normal();
+  }
+
+  @include media-desktop {
+    margin-top: 74px;
+    margin-bottom: 11px;
+    margin-left: 0;
+    padding: 0 53px;
+    width: auto;
   }
 }
 
 .offers__link {
   position: relative;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: solid 1px $color-gray-border;
   color: $color-black;
   text-transform: uppercase;
   font-size: 16px;
@@ -119,10 +199,10 @@
 
   &::after {
     position: absolute;
-    top: 7px;
+    top: 24px;
     left: 95px;
-    width: 15px;
-    height: 10px;
+    width: 27px;
+    height: 11px;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-position: top, left;
     background-repeat: no-repeat;
@@ -132,7 +212,21 @@
 
 @include media-tablet {
   .offers__link {
+    border: none;
     font-size: 20px;
     line-height: 20px;
+    margin-left: 37px;
+    padding-bottom: 53px;
+
+    &::after {
+      left: 130px;
+    }
+  }
+}
+
+@include media-desktop {
+  .offers__link {
+    margin-left: 53px;
+    margin-bottom: 9px;
   }
 }

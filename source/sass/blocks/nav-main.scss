@@ -2,20 +2,22 @@
   position: relative;
 
   @include media-tablet {
-    width: 70%;
+    margin-top: 11px;
+    width: 62%;
   }
 
   @include media-desktop {
-    width: 50%;
+    margin-top: 40px;
+    width: 39%;
   }
 }
 
 .nav-main__toggle {
   position: absolute;
-  top: -50px;
-  left: 225px;
-  width: 24px;
-  height: 24px;
+  top: -42px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
   border: none;
   background-color: $color-white;
   background-image: url("../img/icon-close.svg");
@@ -24,6 +26,28 @@
   cursor: pointer;
 
   @include media-tablet {
+    display: none;
+  }
+}
+
+.nav-main--closed .nav-main__toggle {
+  top: -45px;
+  right: 2px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icon-mobile-menu.svg");
+}
+
+@include media-mobile {
+  .nav-main--closed .main-menu {
+    display: none;
+  }
+
+  .nav-main--nojs .main-menu {
+    display: block;
+  }
+
+  .nav-main--nojs .nav-main__toggle {
     display: none;
   }
 }

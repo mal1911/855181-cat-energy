@@ -1,4 +1,6 @@
 .main-menu {
+  margin: 0;
+
   @include ul-reset();
 
   @include media-tablet {
@@ -17,7 +19,10 @@
 
 .main-menu__link {
   display: block;
-  padding: 5px 0;
+  padding-top: 22px;
+  padding-right: 0;
+  padding-bottom: 22px;
+  padding-left: 0;
   border-top: 1px solid $color-gray;
   border-bottom: 1px solid $color-gray;
   color: $color-black;
@@ -26,10 +31,15 @@
   font-size: 20px;
   line-height: 20px;
 
-  @include font-oswald-regular();
+  @include font-oswald-medium();
 
   @include media-tablet {
+    padding-bottom: 5px;
     border: none;
+    font-size: 18px;
+    line-height: 24px;
+
+    @include font-oswald-regular();
 
     &:focus,
     &:hover {
@@ -39,6 +49,12 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  @include media-desktop {
+    padding-bottom: 7px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 

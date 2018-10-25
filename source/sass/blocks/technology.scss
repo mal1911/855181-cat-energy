@@ -1,36 +1,59 @@
 .technology {
+  margin-top: -3px;
   padding: 0 20px;
+
+  @include media-tablet {
+    margin-top: 45px;
+    padding: 0 30px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid $color-gray;
+  }
+
+  @include media-desktop {
+    padding: 0 40px;
+  }
 }
 
 .technology__header {
+  margin: 0;
   color: $color-black;
   font-size: 36px;
   line-height: 60px;
 
   @include font-oswald-regular();
+
+  @include media-tablet {
+    font-size: 60px;
+  }
 }
 
 .technology__list {
+  margin-top: 26px;
+
   @include ul-reset();
 
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 0;
   }
 }
 
 .technology__item {
   position: relative;
   display: flex;
+  box-sizing: border-box;
+  margin-top: 16px;
 
   &::before {
     display: block;
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    margin-top: 2px;
+    width: 60px;
+    height: 60px;
     background-color: $color-green;
     background-position: center;
-    background-size: 30px 30px;
+    background-size: 50px 50px;
     background-repeat: no-repeat;
     content: "";
   }
@@ -40,11 +63,11 @@
   }
 
   &--packaging::before {
-    background-image: url("../img/advantage-dining@1x.png");
+    background-image: url("../img/advantage-powder@1x.png");
   }
 
   &--lunch::before {
-    background-image: url("../img/advantage-powder@1x.png");
+    background-image: url("../img/advantage-dining@1x.png");
   }
 
   &--result::before {
@@ -55,6 +78,7 @@
 @include media-tablet {
   .technology__item {
     flex-direction: column;
+    margin-top: 70px;
     width: 50%;
 
     &::before {
@@ -65,35 +89,81 @@
 
     &::after {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      top: -26px;
+      left: 106px;
+      z-index: -1;
+      width: auto;
+      height: auto;
       color: $color-gray;
       content: counter(tech-counter);
       counter-increment: tech-counter;
-      font-size: 200px;
+      font-size: 281px;
+      line-height: 281px;
 
       @include font-oswald-regular;
+    }
+  }
+
+  .technology__item:nth-child(2n) {
+    padding-left: 30px;
+
+    &::after {
+      left: 144px;
     }
   }
 }
 
 @include media-desktop {
   .technology__item {
-    width: 25%;
+    margin-right: 85px;
+    padding: 0;
+    width: 240px;
 
     &::before {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       background-size: 50px 50px;
+    }
+
+    &::after {
+      top: -38px;
+      left: 117px;
+    }
+  }
+
+  .technology__item:last-child {
+    margin-right: 0;
+  }
+
+  .technology__item:nth-child(2n) {
+    padding-left: 0;
+
+    &::after {
+      left: 106px;
     }
   }
 }
 
 .technology__text {
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 20px;
   color: $color-black-light;
   font-size: 14px;
   line-height: 18px;
 
   @include font-arial-normal();
+
+  @include media-tablet {
+    margin-top: 33px;
+    margin-bottom: 60px;
+    margin-left: 0;
+    width: 77%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include media-desktop {
+    width: 265px;
+  }
 }

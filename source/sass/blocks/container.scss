@@ -1,9 +1,17 @@
-.container {
+.container,
+.container-header {
   box-sizing: border-box;
   margin: 0 auto;
   min-width: $width-mobile;
 
   @include media-desktop {
     max-width: $width-desktop;
+  }
+}
+
+.container-header {
+  @include media-desktop {
+    width: $width-desktop;
+    margin: 0 0;
   }
 }

@@ -11,9 +11,13 @@
 <body>
   <header class="header container">
     <a class="header__logo" href="index.html">
-      <img class="header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Cat Energy">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy">
+      </picture>
     </a>
-    <nav class="nav-main">
+    <nav class="nav-main nav-main--closed nav-main--nojs">
       <button class="nav-main__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="nav-main__list main-menu">
         <li class="main-menu__item">
@@ -54,26 +58,28 @@
           </div>
         </div>
         <div class="picking__action">
-          <label class="picking__radio-label" for="radio-weight-minus">Похудение</label>
-          <input class="picking__radio-input visually-hidden" id="radio-weight-minus" type="radio" name="radio-weight-minus"
+          <input class="picking__radio-input visually-hidden" id="radio-weight-minus" type="radio" name="radio-button"
             value="on" checked>
-          <label class="picking__radio-label" for="radio-weight-plus">Набор массы</label>
-          <input class="picking__radio-input visually-hidden" id="radio-weight-plus" type="radio" name="radio-weight-plus"
+          <label class="picking__radio-button" for="radio-weight-minus">Похудение</label>
+          <input class="picking__radio-input visually-hidden" id="radio-weight-plus" type="radio" name="radio-button"
             value="off">
-          <label class="picking__radio-label" for="radio-not-know">Не знаю (Нужен ваш совет)</label>
-          <input class="picking__radio-input visually-hidden" id="radio-not-know" type="radio" name="radio-not-know"
+          <label class="picking__radio-button" for="radio-weight-plus">Набор массы</label>
+          <input class="picking__radio-input visually-hidden" id="radio-not-know" type="radio" name="radio-button"
             value="off">
+          <label class="picking__radio-button" for="radio-not-know">Не знаю (Нужен ваш совет)</label>
         </div>
       </section>
       <section class="picking__contacts">
-        <h2 class="picking__header color-header">Контактные данные (владельца кота)</h2>
+        <div class="picking__header color-header">
+          <h2 class="container-header">Контактные данные (владельца кота)</h2>
+        </div>
         <div class="container">
-          <div class="picking__text-control">
+          <div class="picking__text-control picking__text-control--email">
             <label class="picking__text-label" for="contacts__email">E-mail:*</label>
             <input class="picking__text-input" id="contactts__email" type="email" required name="email" placeholder="kuklachev@gmail.com"
               autocomplete="off">
           </div>
-          <div class="picking__text-control">
+          <div class="picking__text-control picking__text-control--tel">
             <label class="picking__text-label" for="contacts__tel">Телефон:*</label>
             <input class="picking__text-input" id="contactts__tel" type="tel" required name="tel" pattern=""
               placeholder="8 (960) 900-60-90" autocomplete="off">
@@ -81,32 +87,35 @@
         </div>
       </section>
       <section class="picking__comments">
-        <h2 class="picking__header color-header">Комментарии</h2>
+        <div class="picking__header color-header">
+          <h2 class="container-header">Комментарий</h2>
+        </div>
         <div class="container">
           <textarea class="picking__textarea" name="comments" id="comments" placeholder="Расскажите обо всех повадках кота"
             autocomplete="off"></textarea>
-
         </div>
       </section>
       <section class="picking__additionally">
-        <h2 class="picking__header color-header">Дополнительно</h2>
+        <div class="picking__header color-header">
+          <h2 class="container-header">Дополнительно</h2>
+        </div>
         <div class="container">
           <div class="picking__check-control">
-            <label class="picking__check-label picking__check-label--sweetener" for="additionally--sweetener">Сахарозаменитель</label>
             <input class="picking__check-input visually-hidden" id="additionally--sweetener" type="checkbox" name="sweetener"
               checked>
+            <label class="picking__check-box picking__check-box--sweetener" for="additionally--sweetener">Сахарозаменитель</label>
           </div>
           <div class="picking__check-control">
-            <label class="picking__check-label picking__check-label--water" for="additionally--water">Питьевая вода</label>
             <input class="picking__check-input visually-hidden" id="additionally--water" type="checkbox" name="water">
+            <label class="picking__check-box picking__check-box--water" for="additionally--water">Питьевая вода</label>
           </div>
           <div class="picking__check-control">
-            <label class="picking__check-label picking__check-label--milk" for="additionally--milk">Молоко</label>
             <input class="picking__check-input visually-hidden" id="additionally--milk" type="checkbox" name="milk">
+            <label class="picking__check-box picking__check-box--milk" for="additionally--milk">Молоко</label>
           </div>
           <div class="picking__check-control">
-            <label class="picking__check-label picking__check-label--vitamins" for="additionally--vitamins">Витамины</label>
             <input class="picking__check-input visually-hidden" id="additionally--vitamins" type="checkbox" name="vitamins">
+            <label class="picking__check-box picking__check-box--vitamins" for="additionally--vitamins">Витамины</label>
           </div>
         </div>
       </section>
@@ -116,22 +125,23 @@
       </div>
     </form>
   </main>
-  <footer class="footer">
+  <footer class="footer footer-form">
     <section class="contacts container">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__row">
-        <p class="contacts__slogan">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__slogan">приглашаем <br> к сотрудничеству дилеров!</p>
         <div class="contacts__col">
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
           <p class="contacts__city">Санкт-Петербург</p>
         </div>
       </div>
     </section>
-    <img class="footer__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Как к нам добраться">
+    <div class="footer__map">
+    </div>
     <div class="footer__bottom">
       <div class="container">
         <a class="footer__logo" href="index.html">
-          <img class="footer__logo-image" src="img/logo-footer.svg" width="180" height="50" alt="Cat Energy">
+          <img class="footer__logo-image" src="img/logo-footer.svg" width="135" alt="Cat Energy">
         </a>
         <ul class="footer__social social-menu">
           <li class="social-menu__item">
@@ -147,11 +157,12 @@
         <div class="footer__academy">
           <a href="https://up.htmlacademy.ru/adaptive/15" class="footer__academy-text">HTML Academy</a>
           <a href="https://up.htmlacademy.ru/adaptive/15" class="footer__academy-img"><img src="img/htmlacademy.svg"
-              width="30" height="30" alt="HTML Academy"></a>
+              width="40" alt="HTML Academy"></a>
         </div>
       </div>
     </div>
   </footer>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

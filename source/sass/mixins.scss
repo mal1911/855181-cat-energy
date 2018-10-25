@@ -1,3 +1,9 @@
+@mixin media-mobile {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+
 @mixin media-tablet {
   @media (min-width: $width-tablet) {
     @content;
@@ -22,5 +28,10 @@
 
 @mixin font-oswald-regular {
   font-weight: 400;
+  font-family: $font-oswald;
+}
+
+@mixin font-oswald-medium {
+  font-weight: 600;
   font-family: $font-oswald;
 }

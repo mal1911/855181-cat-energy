@@ -2,7 +2,87 @@
   display: flex;
   align-items: flex-start;
   padding-left: 20px;
+
+  &::after {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-top: 13px;
+    margin-left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: $color-green;
+    content: "";
+  }
+}
+
+@include media-tablet {
+  .color-header {
+    padding-left: 0;
+
+    &::before {
+      display: block;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-top: 23px;
+      margin-right: 39px;
+      margin-left: 0;
+      width: 28px;
+      height: 3px;
+      background-color: $color-green;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      flex-grow: 1;
+      flex-shrink: 0;
+      margin-top: 23px;
+      margin-left: 0;
+      height: 3px;
+      background-color: $color-green;
+      content: "";
+    }
+  }
+}
+
+@include media-desktop {
+  .color-header {
+    flex-grow: 0;
+
+    &::before {
+      display: block;
+      flex-grow: 1;
+      flex-shrink: 0;
+      margin-top: 23px;
+      margin-right: 0;
+      margin-left: 0;
+      width: auto;
+      height: 3px;
+      background-color: $color-green;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      flex-grow: 1;
+      flex-shrink: 0;
+      margin-right: 0;
+      margin-left: 0;
+      width: auto;
+      height: 3px;
+      background-color: $color-green;
+      content: "";
+    }
+  }
+}
+
+.color-header .container-header {
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
   color: $color-black;
+  text-align: left;
   font-size: 24px;
   line-height: 24px;
 
@@ -13,8 +93,7 @@
     flex-grow: 1;
     flex-shrink: 0;
     margin-top: 13px;
-    margin-left: 10px;
-    width: 95px;
+    margin-left: 23px;
     height: 3px;
     background-color: $color-green;
     content: "";
@@ -22,41 +101,33 @@
 }
 
 @include media-tablet {
-  .color-header {
-    padding-left: 0;
+  .color-header .container-header {
     font-size: 36px;
     line-height: 36px;
 
-    &::before {
+    &::after {
       display: block;
+      flex-grow: 1;
       flex-shrink: 0;
-      margin-top: 18px;
-      margin-right: 10px;
-      width: 20px;
+      margin-top: 23px;
+      margin-right: 0;
+      margin-left: 45px;
       height: 3px;
       background-color: $color-green;
       content: "";
-    }
-
-    &::after {
-      margin-top: 18px;
-      margin-left: 10px;
-      width: 95px;
-      height: 3px;
     }
   }
 }
 
 @include media-desktop {
-  .color-header {
-    &::before {
-      margin-right: 50px;
-      width: 50px;
-    }
+  .color-header .container-header {
+    padding-left: 40px;
 
     &::after {
-      margin-left: 50px;
-      width: 300px;
+      margin-right: 0;
+      margin-left: 20px;
+      width: auto;
+      height: 3px;
     }
   }
 }

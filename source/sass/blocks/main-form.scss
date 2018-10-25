@@ -6,8 +6,15 @@
 
   @include font-oswald-regular();
 
+  padding-top: 26px;
+
   @include media-tablet {
+    margin-top: 18px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @include media-desktop {
+    margin-top: 32px;
   }
 }

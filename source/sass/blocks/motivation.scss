@@ -1,4 +1,5 @@
 .motivation {
+  position: relative;
   padding: 0 20px;
   text-align: center;
 
@@ -19,8 +20,6 @@
 
 @include media-tablet {
   .motivation {
-    padding-left: 50px;
-    width: 60%;
     text-align: left;
 
     &::before {
@@ -32,7 +31,7 @@
 
 @include media-desktop {
   .motivation {
-    padding-left: 50px;
+    position: static;
 
     &::before {
       position: absolute;
@@ -44,16 +43,46 @@
       width: 50%;
       background-color: $color-background-green;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-position: top right;
-      background-size: cover;
+      background-position: left top;
+      background-size: 100%;
       background-repeat: no-repeat;
       content: "";
     }
   }
 }
 
+.motivation .main-index__header {
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-top: 26px;
+  width: 275px;
+  text-align: center;
+
+  @include media-tablet {
+    position: static;
+    margin-top: 19px;
+    margin-left: 96px;
+    padding-right: auto;
+    padding-left: 0;
+    width: 450px;
+    text-align: left;
+  }
+
+  @include media-desktop {
+    margin-top: 70px;
+    width: 37%;
+  }
+}
+
 .motivation__slogan {
+  margin-top: 27px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  width: 210px;
   color: $color-white;
+  text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 14px;
@@ -61,20 +90,62 @@
   @include font-oswald-regular();
 
   @include media-tablet {
+    margin-top: 40px;
+    margin-left: 96px;
+    padding-right: auto;
+    padding-left: 0;
+    width: 300px;
     color: $color-black;
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
-.motivation__button {
-  @include media-tablet {
-    width: 250px;
+    text-align: left;
     font-size: 20px;
     line-height: 20px;
   }
 
   @include media-desktop {
-    margin-bottom: 220px;
+    margin-top: 41px;
+  }
+}
+
+.motivation__image {
+  margin-top: 30px;
+  width: 280px;
+  height: 271px;
+
+  @include media-tablet {
+    margin-top: 16px;
+    margin-left: 11px;
+    width: 709px;
+    height: 609px;
+  }
+
+  @include media-desktop {
+    position: absolute;
+    top: 377px;
+    left: 57%;
+    width: 552px;
+    height: 499px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.motivation__button {
+  margin-top: -1px;
+
+  @include media-tablet {
+    position: absolute;
+    top: 254px;
+    left: 118px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 205px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include media-desktop {
+    position: static;
+    margin-top: 52px;
+    margin-bottom: 268px;
+    margin-left: 99px;
   }
 }

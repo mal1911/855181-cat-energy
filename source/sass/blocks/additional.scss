@@ -1,11 +1,40 @@
+.additional {
+  margin-bottom: 35px;
+
+  @include media-tablet {
+    margin-bottom: 76px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 48px;
+  }
+}
+
 .additional .container {
   padding: 0 20px;
+
+  @include media-tablet {
+    padding: 0 30px;
+  }
 
   @include media-desktop {
     display: flex;
     justify-content: space-between;
+    padding: 0 40px;
   }
 }
+
+.additional__header {
+  margin-top: 30px;
+  margin-bottom: 32px;
+}
+
+.additional .container-header {
+  &::after {
+    width: 71px;
+  }
+}
+
 
 .additional__advertising {
   width: 100%;
@@ -18,12 +47,11 @@
 
   &::before {
     display: block;
-    margin: 20px auto;
-    width: 55px;
-    height: 60px;
+    width: 100%;
+    height: 126px;
     background-image: url("../img/icon-gift.svg");
-    background-position: top, center;
-    background-size: cover;
+    background-position: bottom, center;
+    background-size: 55px 60px;
     background-repeat: no-repeat;
     content: "";
   }
@@ -31,59 +59,128 @@
 
 @include media-tablet {
   .additional__advertising {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    margin-top: 70px;
+    height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    &::before {
+      position: absolute;
+      top: 63px;
+      left: 91px;
+      width: 55px;
+      height: 60px;
+      background-image: url("../img/icon-gift.svg");
+      background-position: top, left;
+    }
   }
 }
 
 @include media-desktop {
   .additional__advertising {
-    flex-direction: column;
+    margin-top: 49px;
     width: 245px;
+    height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
   }
 }
 
 .additional__text {
+  margin-top: 61px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 157px;
   color: $color-white;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
 
   @include font-arial-normal();
+
+  @include media-tablet {
+    margin-left: 424px;
+    padding-top: 72px;
+    text-align: left;
+  }
+
+  @include media-desktop {
+    margin-left: 49px;
+    padding-top: 124px;
+    text-align: center;
+  }
 }
 
 .additional__list {
+  margin-top: 0;
+  margin-bottom: 40px;
+
   @include ul-reset;
+
+  @include media-tablet {
+    margin-top: 79px;
+  }
+
+  @include media-desktop {
+    margin-top: 47px;
+    width: 75%;
+  }
 }
 
 .additional__item {
+  border-top: 1px solid $color-gray-border;
   border-bottom: 1px solid $color-gray-border;
 
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-right: 39px;
+    padding-left: 39px;
+    border: 1px solid $color-gray;
+  }
+
+  @include media-desktop {
+    padding-right: 20px;
+    padding-left: 4px;
+    border-right: none;
+    border-left: none;
   }
 }
 
 .additional__name {
+  margin-top: 15px;
+  margin-bottom: 0;
   color: $color-black2;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
 
   @include font-oswald-regular();
+
+  @include media-tablet {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
+    width: 284px;
+  }
 }
 
 .additional__link {
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   @include media-tablet {
+    margin-bottom: 27px;
     width: 100%;
   }
 
   @include media-desktop {
+    margin-bottom: 15px;
     width: 200px;
   }
 }
@@ -91,20 +188,56 @@
 .additional__prop {
   display: flex;
   justify-content: space-between;
+
+  @include media-tablet {
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+
+  @include media-desktop {
+    justify-content: space-between;
+    width: 296px;
+  }
 }
 
 .additional__packaging {
+  margin-top: 12px;
+  margin-bottom: 0;
   color: $color-black-light;
   font-size: 14px;
   line-height: 14px;
 
   @include font-arial-normal();
+
+  @include media-tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include media-desktop {
+    text-align: left;
+  }
 }
 
 .additional__cost {
+  margin-top: 12px;
+  margin-bottom: 0;
   color: $color-black-light;
   font-size: 14px;
   line-height: 14px;
 
   @include font-arial-normal();
+
+  @include media-tablet {
+    margin-top: 15px;
+    margin-left: 43px;
+    width: 50px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include media-desktop {
+    text-align: left;
+  }
 }

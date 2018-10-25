@@ -4,11 +4,11 @@ body {
   min-width: $width-mobile;
   background-color: $color-white;
   color: $color-black-light;
+  counter-reset: tech-counter;
   font-size: 14px;
   line-height: 18px;
 
   @include font-arial-normal();
-  counter-reset: tech-counter;
 }
 
 a {
@@ -29,4 +29,20 @@ img {
   width: 1px;
   height: 1px;
   border: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: number-input;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+
+  appearance: none;
 }
