@@ -1,0 +1,92 @@
+.slider {
+  @include media-desktop {
+    background-image: linear-gradient(to right, #f2f2f2 365px, #eaeaea 365px);
+  }
+}
+
+.slider__slides {
+  position: relative;
+  /*display: flex;
+  overflow: hidden;*/
+
+  @include media-tablet {
+  }
+  @include media-desktop {
+    margin-top: -189px;
+    width: 690px;
+    height: 517px;
+  }
+}
+
+@include media-desktop {
+  .slider__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+
+    &--before {
+      clip: rect(0, 365px, 517px, 0);
+    }
+
+    &--after {
+      clip: rect(0, 690px, 517px, 365px);
+    }
+  }
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+
+  @include media-desktop {
+    margin-top: 39px;
+    padding-right: 43px;
+    padding-left: 77px;
+  }
+}
+
+.slider__radio-button {
+  @include media-desktop {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 20px;
+
+    @include font-oswald-regular();
+  }
+}
+
+.slider__bar {
+  @include media-desktop {
+    margin-top: 8px;
+    width: 422px;
+    height: 5px;
+    border-radius: 10%;
+    background-color: $color-gray-border;
+  }
+}
+
+.slider__switch {
+  position: relative;
+  @include media-desktop {
+    margin-top: -15px;
+    margin-left: 196px;
+    width: 33px;
+    height: 33px;
+    border: 1px solid $color-gray-border;
+    border-radius: 50%;
+    background-color: $color-white;
+    &::before {
+      position: absolute;
+      top: 11px;
+      left: 12px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: $color-background-green;
+      content: "";
+    }
+  }
+}
