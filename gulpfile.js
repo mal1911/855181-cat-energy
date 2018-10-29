@@ -15,12 +15,9 @@ var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var server = require("browser-sync").create();
 
-
-
 gulp.task("clean", function () {
   return del("build")
 });
-
 
 gulp.task("copy", function () {
   return gulp.src([
@@ -30,7 +27,6 @@ gulp.task("copy", function () {
   ], { base: "source" })
     .pipe(gulp.dest("build"))
 });
-
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -46,12 +42,10 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([include()]))
     .pipe(gulp.dest("build"))
-
 });
 
 gulp.task("sprite", function () {
@@ -59,7 +53,6 @@ gulp.task("sprite", function () {
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
-
 });
 
 gulp.task("images", function () {
@@ -70,7 +63,6 @@ gulp.task("images", function () {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("source/img"))
-
 });
 
 gulp.task("webp", function () {
@@ -85,7 +77,6 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -97,8 +88,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
-  gulp.watch("source/*.html", gulp.series("html" , "refresh"));
-
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
