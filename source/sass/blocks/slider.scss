@@ -6,27 +6,55 @@
 
 .slider__slides {
   position: relative;
-  /*display: flex;
-  overflow: hidden;*/
+  width: 320px;
+  height: 240px;
 
   @include media-tablet {
-  }
-  @include media-desktop {
-    margin-top: -189px;
     width: 690px;
     height: 517px;
+  }
+
+  @include media-desktop {
+    margin-top: -189px;
+  }
+}
+
+.slider__image {
+  position: absolute;
+  top: 18px;
+  left: -22px;
+  max-width: none;
+  width: 320px;
+  height: 240px;
+
+  &--before {
+    clip: rect(0, 320px, 240px, 0);
+  }
+
+  &--after {
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+@include media-tablet {
+  .slider__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &--before {
+      clip: rect(0, 340px, 517px, 0);
+    }
+
+    &--after {
+      clip: rect(0, 690px, 517px, 340px);
+    }
   }
 }
 
 @include media-desktop {
   .slider__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: none;
-    width: 100%;
-    height: 100%;
-
     &--before {
       clip: rect(0, 365px, 517px, 0);
     }
@@ -40,6 +68,17 @@
 .slider__controls {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
+  padding-right: 38px;
+  padding-bottom: 35px;
+  padding-left: 43px;
+
+  @include media-tablet {
+    margin-top: 21px;
+    padding-right: 69px;
+    padding-bottom: 76px;
+    padding-left: 52px;
+  }
 
   @include media-desktop {
     margin-top: 39px;
@@ -49,35 +88,58 @@
 }
 
 .slider__radio-button {
-  @include media-desktop {
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
 
-    @include font-oswald-regular();
+  @include font-oswald-regular();
+
+  @include media-tablet {
+    font-size: 20px;
   }
 }
 
 .slider__bar {
-  @include media-desktop {
+  position: relative;
+  margin-top: 3px;
+  width: 78px;
+  height: 10px;
+  border: 2px solid $color-gray-border;
+  border-radius: 20%;
+  background-color: $color-white;
+
+  @include media-tablet {
     margin-top: 8px;
     width: 422px;
-    height: 5px;
+    height: 2px;
     border-radius: 10%;
     background-color: $color-gray-border;
+  }
+
+  @include media-desktop {
+    height: 5px;
   }
 }
 
 .slider__switch {
-  position: relative;
-  @include media-desktop {
-    margin-top: -15px;
-    margin-left: 196px;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 34px;
+  height: 6px;
+  border-radius: 20%;
+  background-color: $color-background-green;
+
+  @include media-tablet {
+    position: relative;
+    margin-top: -18px;
+    margin-left: 192px;
     width: 33px;
     height: 33px;
     border: 1px solid $color-gray-border;
     border-radius: 50%;
     background-color: $color-white;
+
     &::before {
       position: absolute;
       top: 11px;
