@@ -25,11 +25,19 @@
   background-position: center -37px;
   background-size: cover;
 
+  @include retina {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
+
   @include media-tablet {
     height: 398px;
     background-image: url("../img/bg-map-tablet@1x.png");
     background-position: center -2px;
     background-size: cover;
+
+    @include retina {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
   }
 
   @include media-desktop {
@@ -38,6 +46,10 @@
     background-image: url("../img/bg-map-desktop@1x.png");
     background-position: center top;
     background-size: contain;
+
+    @include retina {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 }
 

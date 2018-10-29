@@ -5,10 +5,13 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+  <div class="sprite">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="header container">
     <a class="header__logo">
       <picture>
@@ -38,9 +41,12 @@
       <h2 class="visually-hidden">Подбор программы</h2>
       <p class="motivation__slogan">Занялся собой? Займись котом!</p>
       <picture>
-        <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
-        <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-        <img class="motivation__image" src="img/index-can-mobile@1x.png" alt="Cat energy">
+        <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp, img/index-can-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.webp 2x">
+        <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+        <img class="motivation__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Cat energy">
       </picture>
       <a href="#" class="button motivation__button">Подобрать программу</a>
     </section>
@@ -99,8 +105,38 @@
             <p class="example__cost">Затраты на питание: <span>15 000 руб.</span></p>
           </div>
         </div>
-        <div class="example__slider">
-          Тут будет слайдер
+        <div class="example__slider slider">
+          <input class="slider__radio-input visually-hidden" type="radio" id="radio-slider-before" name="slider-toggle">
+          <input class="slider__radio-input visually-hidden" type="radio" id="radio-slider-after" name="slider-toggle">
+          <div class="slider__inner">
+            <div class="slider__slides">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                <img class="slider__image slider__image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"
+                  alt="Было">
+              </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                <img class="slider__image slider__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x"
+                  alt="Стало">
+              </picture>
+            </div>
+          </div>
+          <div class="slider__controls">
+            <label class="slider__radio-button" for="radio-slider-before">Было</label>
+            <div class="slider__bar">
+              <div class="slider__switch"></div>
+            </div>
+            <label class="slider__radio-button" for="radio-slider-after">Стало</label>
+          </div>
         </div>
       </div>
     </section>
@@ -143,6 +179,7 @@
     </div>
   </footer>
   <script src="js/scripts.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 
 </html>

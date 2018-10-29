@@ -11,8 +11,10 @@
 
   @include media-desktop {
     padding: 0 40px;
+    margin-bottom: 184px;
   }
 }
+
 
 .technology__header {
   margin: 0;
@@ -60,18 +62,34 @@
 
   &--vitamins::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--packaging::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--lunch::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--result::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 }
 

@@ -3,14 +3,17 @@
   background-color: $color-gray;
 
   @include media-tablet {
-    margin-top: 26px;
+    margin-top: 618px;
+    background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
     background-color: inherit;
   }
 
   @include media-desktop {
-    background-image: linear-gradient(to bottom, $color-white 150px, $color-gray 150px);
+    margin-top: 0;
+    background: linear-gradient(to right, #f2f2f2 70%, #eaeaea 30%);
   }
 }
+
 
 .example .container {
   display: flex;
@@ -38,10 +41,12 @@
   @include font-oswald-regular();
 
   @include media-tablet {
+    margin-top: -592px;
     font-size: 60px;
   }
 
   @include media-desktop {
+    margin-top: -152px;
     margin-bottom: 146px;
   }
 }
@@ -82,7 +87,7 @@
   margin-top: 5px;
   margin-bottom: 5px;
 
-  @include ul-reset;
+  @include ul-reset();
 
   @include media-tablet {
     margin-top: 32px;
@@ -190,15 +195,13 @@
 }
 
 .example__slider {
-  width: 300px;
-  height: 349px;
-
   @include media-tablet {
-    margin-top: 20px;
-    height: 680px;
+    margin-top: -171px;
+    margin-left: 16px;
   }
 
   @include media-desktop {
-    height: 595px;
+    margin-top: 0;
+    margin-left: 139px;
   }
 }
