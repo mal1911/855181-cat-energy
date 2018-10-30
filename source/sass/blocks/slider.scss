@@ -152,3 +152,15 @@
     }
   }
 }
+
+@include media-tablet {
+  .slider__switch:hover,
+  .slider__switch:focus {
+    cursor: pointer;
+    box-shadow: 0 3px 4px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .slider__switch:active {
+    border: 2px solid $color-background-green;
+  }
+}

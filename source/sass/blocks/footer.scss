@@ -11,6 +11,15 @@
   }
 }
 
+.footer__logo:focus,
+.footer__logo:hover {
+  opacity: 0.8;
+}
+
+.footer__logo:active {
+  opacity: 0.6;
+}
+
 .footer-form,
 .footer-catalog {
   background-color: $color-gray;
@@ -79,6 +88,7 @@
 }
 
 .footer__logo {
+  cursor: pointer;
   display: block;
   padding-top: 40px;
   padding-bottom: 10px;
@@ -119,10 +129,26 @@
   @include font-arial-normal();
 }
 
-.footer__academy-img {
+.footer__academy-link {
   margin-right: -7px;
 
   @include media-tablet {
     margin-left: 17px;
   }
+}
+
+.footer__academy-svg {
+  fill: $color-gray-icon;
+  width: 40px;
+  height: 40px;
+}
+
+.footer__academy-link:hover .footer__academy-svg,
+.footer__academy-link:focus .footer__academy-svg {
+  fill: $color-green-button-hover;
+}
+
+.footer__academy-text:active,
+.footer__academy-link:active .footer__academy-svg {
+  opacity: 0.3;
 }

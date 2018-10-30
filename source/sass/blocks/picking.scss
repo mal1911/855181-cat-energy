@@ -42,12 +42,12 @@
 }
 
 .picking__basis {
-  border-bottom: 1px solid $color-gray;
   margin-bottom: 37px;
+  border-bottom: 1px solid $color-gray;
 
   @include media-tablet {
-    border: none;
     margin-bottom: 76px;
+    border: none;
   }
 
   @include media-desktop {
@@ -99,7 +99,6 @@
     padding-left: 40px;
   }
 }
-
 
 .picking__comments .container {
   margin-top: 32px;
@@ -157,7 +156,7 @@
     padding-bottom: 3px;
     padding-left: 42px;
     width: auto;
-    border: 1px solid $color-gray-border;
+    border: 1px solid $color-gray-input;
   }
 
   @include media-desktop {
@@ -168,6 +167,7 @@
 }
 
 .picking__text-control {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 15px;
@@ -187,7 +187,7 @@
   flex-shrink: 0;
   padding: 12px;
   width: 50px;
-  border: 1px solid $color-gray-border;
+  border: 1px solid $color-gray-input;
   color: $color-black-light;
   text-transform: uppercase;
   font-size: 16px;
@@ -200,43 +200,43 @@
     font-size: 20px;
     line-height: 20px;
   }
-}
 
-.picking__text-control--email {
-  position: relative;
+  &:hover {
+    border: 1px solid $color-gray-border;
+  }
 
-  &::before {
-    position: absolute;
-    top: 13px;
-    right: 17px;
-    width: 17px;
-    height: 13px;
-    background-image: url("../img/icon-mail.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    content: "";
+  &:active,
+  &:focus {
+    border: 1px solid $color-black-light;
+  }
+
+  &:invalid {
+    border: 1px solid $color-red-invalid;
   }
 }
 
-.picking__text-control--tel {
-  position: relative;
+.picking__text-svg {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 17px;
+  height: 27px;
 
-  &::before {
-    position: absolute;
-    top: 13px;
-    right: 17px;
-    width: 17px;
-    height: 13px;
-    background-image: url("../img/icon-phone.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    content: "";
-  }
+  fill: $color-black;
+}
+
+.picking__text-input:invalid + .picking__text-svg {
+  fill: $color-red-invalid;
+}
+
+.picking__text-input:focus + .picking__text-svg,
+.picking__text-input:active + .picking__text-svg {
+  fill: $color-green-button-hover;
 }
 
 .picking__text-control--tel .picking__text-input,
 .picking__text-control--email .picking__text-input {
-  padding-right: 20px;
+  padding-right: 50px;
 }
 
 .picking__text-label {
@@ -274,10 +274,21 @@
     display: block;
     width: 28px;
     height: 28px;
-    border: 1px solid $color-gray-border;
+    border: 1px solid $color-gray-input;
     border-radius: 50%;
     content: "";
   }
+}
+
+.picking__radio-button:hover,
+.picking__radio-button:focus {
+  &::before {
+    border: 1px solid $color-gray-border;
+  }
+}
+
+.picking__radio-button:active {
+  opacity: 0.3;
 }
 
 .picking__radio-input:checked + .picking__radio-button {
@@ -324,7 +335,7 @@
   padding: 13px 13px;
   width: 100%;
   height: 121px;
-  border: 1px solid $color-gray-border;
+  border: 1px solid $color-gray-input;
   color: $color-black-light;
   text-transform: uppercase;
   font-size: 16px;
@@ -396,7 +407,7 @@
     display: block;
     width: 28px;
     height: 28px;
-    border: 1px solid $color-gray-border;
+    border: 1px solid $color-gray-input;
     content: "";
   }
 }
@@ -438,6 +449,17 @@
       height: 18px;
     }
   }
+}
+
+.picking__check-box:focus,
+.picking__check-box:hover {
+  &::before {
+    border: 1px solid $color-gray-border;
+  }
+}
+
+.picking__check-box:active {
+  opacity: 0.3;
 }
 
 .picking__button-control {
@@ -491,7 +513,7 @@
   }
 
   @include media-desktop {
-    margin-left: 80px;
     margin-bottom: 103px;
+    margin-left: 80px;
   }
 }
