@@ -19,7 +19,6 @@
   display: block;
   margin-bottom: 11px;
   width: 190px;
-  cursor: pointer;
 
   @include media-tablet {
     margin-top: 11px;
@@ -31,12 +30,13 @@
     width: 200px;
   }
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
+    cursor: pointer;
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 }

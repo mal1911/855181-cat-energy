@@ -11,12 +11,25 @@
   }
 }
 
-.footer__logo:focus,
-.footer__logo:hover {
+.footer__logo {
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+
+  @include media-tablet {
+    width: 131px;
+  }
+}
+
+.footer__logo[href]:focus,
+.footer__logo[href]:hover {
+  cursor: pointer;
   opacity: 0.8;
 }
 
-.footer__logo:active {
+.footer__logo[href]:active {
   opacity: 0.6;
 }
 
@@ -84,19 +97,6 @@
     padding-top: 23px;
     padding-right: 41px;
     padding-left: 38px;
-  }
-}
-
-.footer__logo {
-  cursor: pointer;
-  display: block;
-  padding-top: 40px;
-  padding-bottom: 10px;
-  width: 100%;
-  text-align: center;
-
-  @include media-tablet {
-    width: 131px;
   }
 }
 

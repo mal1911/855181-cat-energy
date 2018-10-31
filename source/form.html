@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -51,13 +53,13 @@
           </div>
           <div class="picking__text-control">
             <label class="picking__text-label" for="cat__weight">Вес (кг):*</label>
-            <input class="picking__text-input" id="cat__weight" type="number" required name="cat__weight" pattern=""
-              placeholder="7" value="7" autocomplete="off">
+            <input class="picking__text-input" id="cat__weight" type="number" required name="cat__weight" placeholder="7"
+              value="7" autocomplete="off">
           </div>
           <div class="picking__text-control">
             <label class="picking__text-label" for="cat__age">Возраст (лет):</label>
-            <input class="picking__text-input" id="cat__age" type="number" required name="cat__age" pattern=""
-              placeholder="7" value="7" autocomplete="off">
+            <input class="picking__text-input" id="cat__age" type="number" required name="cat__age" placeholder="7"
+              value="7" autocomplete="off">
           </div>
         </div>
         <div class="picking__action">
@@ -79,7 +81,7 @@
         <div class="container">
           <div class="picking__text-control picking__text-control--email">
             <label class="picking__text-label" for="contacts__email">E-mail:*</label>
-            <input class="picking__text-input" id="contactts__email" type="email" required name="email" placeholder="kuklachev@gmail.com"
+            <input class="picking__text-input" id="contacts__email" type="email" required name="email" placeholder="kuklachev@gmail.com"
               autocomplete="off">
             <svg class="picking__text-svg picking__text-svg--email" width="17" height="13">
               <use xlink:href="#sprite-icon-mail"></use>
@@ -87,8 +89,8 @@
           </div>
           <div class="picking__text-control picking__text-control--tel">
             <label class="picking__text-label" for="contacts__tel">Телефон:*</label>
-            <input class="picking__text-input" id="contactts__tel" type="tel" required name="tel" pattern=""
-              placeholder="8 (960) 900-60-90" autocomplete="off">
+            <input class="picking__text-input" id="contacts__tel" type="tel" required name="tel" pattern="" placeholder="8 (960) 900-60-90"
+              autocomplete="off">
             <svg class="picking__text-svg picking__text-svg--tel" width="17" height="13">
               <use xlink:href="#sprite-icon-phone"></use>
             </svg>
@@ -198,8 +200,11 @@
       </div>
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
+  <script src="https://webasr.yandex.net/jsapi/v1/webspeechkit.js"></script>
+  <script src="https://webasr.yandex.net/jsapi/v1/webspeechkit-settings.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/picturefill.min.js"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

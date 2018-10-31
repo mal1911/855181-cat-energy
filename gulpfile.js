@@ -14,6 +14,13 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var server = require("browser-sync").create();
+const htmlmin = require('gulp-htmlmin');
+
+gulp.task('htmlmin', () => {
+  return gulp.src('build/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
+});
 
 gulp.task("clean", function () {
   return del("build")
@@ -91,5 +98,5 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "htmlmin"));
 gulp.task("start", gulp.series("build", "server"));

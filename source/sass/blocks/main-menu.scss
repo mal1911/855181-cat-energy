@@ -41,12 +41,12 @@
 
     @include font-oswald-regular();
 
-    &:focus,
-    &:hover {
+    &[href]:focus,
+    &[href]:hover {
       opacity: 0.6;
     }
 
-    &:active {
+    &[href]:active {
       opacity: 0.3;
     }
   }
