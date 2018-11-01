@@ -137,12 +137,13 @@
 }
 
 .motivation__button {
-  margin-top: -1px;
+  margin-top: -4px;
 
   @include media-tablet {
     position: absolute;
     top: 254px;
     left: 118px;
+    margin-top: -1px;
     padding-top: 15px;
     padding-bottom: 15px;
     width: 205px;
